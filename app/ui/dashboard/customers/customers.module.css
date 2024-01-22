@@ -1,0 +1,55 @@
+.container{
+    padding: 20px;
+    border-radius: 10%;
+    margin-top: 20px;
+
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addNew {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+}
+
+
+.table td{
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: rgb(0, 162, 212);
+}
+
+.delete {
+    background-color: crimson;
+}

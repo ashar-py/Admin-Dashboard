@@ -1,0 +1,12 @@
+.container{
+    height: 350px;
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+}
+
+.title{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
