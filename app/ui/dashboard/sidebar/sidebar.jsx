@@ -29,7 +29,7 @@ const menuItems = [
             },
             {
                 title: "Conversations",
-                path: "/#",
+                path: "/dashboard/conversations",
                 icon: <BiConversation />,
             },
             {
