@@ -49,7 +49,7 @@ const ConversationPage = () => {
           <button className={styles.button} onClick={handleSendMessage}>Send</button>
         </div>
       </div>
-      <style jsx>{`
+      {/* <style jsx>{`
       .message {
         display: block;
     padding: 8px;
@@ -71,7 +71,7 @@ const ConversationPage = () => {
     align-self: flex-left;
     text-align: left;
   }
-  `}</style>
+  `}</style> */}
     </div>
   );
 };
