@@ -1,0 +1,60 @@
+.container {
+    height: 80vh;
+
+    
+}
+
+.top {
+    margin: 20px;
+}
+
+.h3{
+    justify-content: center;
+    align-items: center;
+}
+
+.active, .closed, .received, .archived {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.table{
+    width: 85%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+}
+
+.table thead{
+    font-weight: 600;
+}
+
+
+.table td{
+    width: 100px;
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.link {
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(0, 149, 255);
+}
+
+.expand {   
+    border: none;
+    background-color: transparent;
+    margin-left: 20px;
+    font-size:1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.expand:hover {
+    text-decoration: underline;
+}

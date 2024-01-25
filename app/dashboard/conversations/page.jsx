@@ -46,11 +46,35 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
+<<<<<<< HEAD
     <div className={styles.chatbotContainer}>
       <div id="chat-container" className={styles.chatContainer}>
         {messages.map((msg, index) => (
           <ChatMessage key={index} message={msg.message} isBot={msg.isBot} />
         ))}
+=======
+    <div className={styles.container}>
+        <h2 className={styles.header}>Chat with our AI tool</h2>
+      <div className={styles.chatbox}>
+        <div className={styles.messages}>
+          {messages.map((message, index) => (
+            <div key={index} className={`message ${message.sender}`}>
+              {message.text}
+            </div>
+          ))}
+        </div>
+        </div>
+        <div className={styles.inputbox}>
+          <input
+          className={styles.input}
+            type="text"
+            placeholder="Type your message..."
+            value={inputText}
+            onChange={handleInputChange}
+          />
+          <button className={styles.button} onClick={handleSendMessage}>Send</button>
+        
+>>>>>>> 67dadd97dc8bc7fa146f5ade93a00203fe6b8da5
       </div>
       <div className={styles.inputContainer}>
         <input

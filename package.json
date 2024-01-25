@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.6.6",
+=======
+    "@nextui-org/react": "^2.2.9",
+    "@nextui-org/table": "^2.0.28",
+>>>>>>> 67dadd97dc8bc7fa146f5ade93a00203fe6b8da5
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
