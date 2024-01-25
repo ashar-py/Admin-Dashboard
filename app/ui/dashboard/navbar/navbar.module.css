@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     padding: 20px;
     border-radius: 10px;
@@ -33,4 +33,46 @@
     background-color: transparent;
     border: none;
     color: var(--text);
-}
+} */
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color:  purple;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .title {
+    color: var(--textSoft);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #1a202f;
+    border-radius: 10px;
+  }
+  
+  .input {
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+  }
+  
+  .icons{
+    display: flex;
+    gap: 20px;
+  }
+  
