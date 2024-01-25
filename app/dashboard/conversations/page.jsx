@@ -1,57 +1,69 @@
 "use client"; // use client
 import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
-import React, { useState } from 'react';
+// src/components/Chatbot.jsx
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ChatMessage from "@/components/chat/chatmessage";
+import ToggleSwitch from "@/components/chat/toggleswitch";
+//import styles from './chatbot.module.css';
 
 
-const ConversationPage = () => {
+const Chatbot = () => {
   const [messages, setMessages] = useState([]);
-  const [inputText, setInputText] = useState('');
+  const [isEnabled, setIsEnabled] = useState(true);
+  const [inputMessage, setInputMessage] = useState('');
 
-  const handleInputChange = (e) => {
-    setInputText(e.target.value);
+  const toggleSwitch = () => {
+    setIsEnabled(!isEnabled);
   };
 
-  const handleSendMessage = () => {
-    if (inputText.trim() === '') return;
+  const sendMessage = async () => {
+    if (inputMessage.trim() === '') return;
 
-    // Add user message to the conversation
-    setMessages((prevMessages) => [...prevMessages, { text: inputText, sender: 'user' }]);
-    
-    // TODO: Call an API or function to get AI response
-    // Replace the setTimeout with your actual API call
-    setTimeout(() => {
-      const aiResponse = 'This is an AI response.'; // Replace with actual AI response
-      setMessages((prevMessages) => [...prevMessages, { text: aiResponse, sender: 'ai' }]);
-    }, 1000);
+    setMessages([...messages, { message: inputMessage, isBot: false }]);
+    setInputMessage('');
 
-    setInputText(''); // Clear the input field
+    if (isEnabled) {
+      try {
+        const response = await axios.post('/api/ai', { message: inputMessage });
+        const botReply = response.data.reply;
+        setMessages([...messages, { message: botReply, isBot: true }]);
+      } catch (error) {
+        console.error('Error communicating with the AI:', error);
+      }
+    } else {
+      // Simulate a response from customer support
+      const supportReply = 'Your message has been forwarded to our support team. They will get back to you soon.';
+      setMessages([...messages, { message: supportReply, isBot: true }]);
+    }
   };
+
+  useEffect(() => {
+    // Scroll to the bottom of the chat when new messages are added
+    const chatContainer = document.getElementById('chat-container');
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }, [messages]);
 
   return (
-    <div className={styles.container}>
-        <h2 className={styles.header}>Chat with our AI tool</h2>
-      <div className={styles.chatbox}>
-        <div className={styles.messages}>
-          {messages.map((message, index) => (
-            <div key={index} className={`message ${message.sender}`}>
-              {message.text}
-            </div>
-          ))}
-        </div>
-        <div className={styles.inputbox}>
-          <input
-          className={styles.input}
-            type="text"
-            placeholder="Type your message..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
-          <button className={styles.button} onClick={handleSendMessage}>Send</button>
-        </div>
+    <div className={styles.chatbotContainer}>
+      <div id="chat-container" className={styles.chatContainer}>
+        {messages.map((msg, index) => (
+          <ChatMessage key={index} message={msg.message} isBot={msg.isBot} />
+        ))}
       </div>
-     
+      <div className={styles.inputContainer}>
+        <input
+          type="text"
+          placeholder="Type your message..."
+          value={inputMessage}
+          onChange={(e) => setInputMessage(e.target.value)}
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
+      <ToggleSwitch isEnabled={isEnabled} toggleSwitch={toggleSwitch} />
     </div>
   );
 };
 
-export default ConversationPage;
+export default Chatbot;
