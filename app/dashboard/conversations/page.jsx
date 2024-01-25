@@ -49,29 +49,7 @@ const ConversationPage = () => {
           <button className={styles.button} onClick={handleSendMessage}>Send</button>
         </div>
       </div>
-      {/* <style jsx>{`
-      .message {
-        display: block;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    width: fit-content;
-    word-wrap: break-word;
-  }
-
-  .user {
-    background-color: #f0fdff;
-    margin-left: auto;
-    text-align: right;
-  }
-
-  .ai {
-    background-color: #00c3ff;
-    color: white;
-    align-self: flex-left;
-    text-align: left;
-  }
-  `}</style> */}
+     
     </div>
   );
 };
