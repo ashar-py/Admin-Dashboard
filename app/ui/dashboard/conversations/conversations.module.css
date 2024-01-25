@@ -68,12 +68,28 @@
 }
 
 .user {
-  background-color: #e3f2fd;
+  background-color: purple;
+  text-align: right;
+  color: #fff;
 }
 
 .bot {
-  background-color: #fce4ec;
+  background-color: yellow;
+  text-align: left;
+  color: #000;
 }
+
+/* .userMessage {
+  text-align: right;
+  color: #fff;
+  background-color: #4caf50;
+}
+
+.botMessage {
+  text-align: left;
+  color: #000;
+  background-color: #e3f2fd;
+} */
 
 .inputContainer {
   display: flex;

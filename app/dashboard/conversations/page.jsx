@@ -1,12 +1,15 @@
 "use client"; // use client
 import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
-
+//import styles from "@/app/dashboard/conversations/conversations.module.css";
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ChatMessage from "@/components/chat/chatmessage";
 import ToggleSwitch from "@/components/chat/toggleswitch";
+//import styles from './chatbot.module.css';
 
+
+// src/components/Chatbot.jsx
 
 
 const Chatbot = () => {
