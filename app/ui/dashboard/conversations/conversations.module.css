@@ -91,7 +91,7 @@
 .inputContainer button {
   flex:1;
   padding: 15px;
-  background: #4caf50;
+  background:blue;
   color: #fff;
   border: none;
   cursor: pointer;
