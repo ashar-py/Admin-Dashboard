@@ -48,17 +48,17 @@
   /* styles/chatbot.module.css */
 /* styles/chatbot.module.css */
 .chatbotContainer {
-  width: fit-content;
+  width: 95%;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  
   padding: 10px;
 }
 
 .chatContainer {
   max-height: 300px;
   overflow-y: auto;
+  height: 90vh;
 }
 
 .chatMessage {
@@ -77,22 +77,25 @@
 
 .inputContainer {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   margin-top: 10px;
+  gap: 10px;
 }
 
 .inputContainer input {
-  flex: 1;
-  padding: 8px;
+  flex: 10;
+  padding: 15px;
   margin-bottom: 10px;
 }
 
-.buttonContainer button {
-  padding: 8px;
-  background-color: #4caf50;
+.inputContainer button {
+  flex:1;
+  padding: 15px;
+  background: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .toggleSwitch {
