@@ -59,7 +59,7 @@
   .search {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2px;
     padding: 10px;
     background-color: #1a202f;
     border-radius: 10px;
