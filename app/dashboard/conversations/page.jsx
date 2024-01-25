@@ -52,8 +52,13 @@ const Chatbot = () => {
     <div className={styles.chatbotContainer}>
       <div id="chat-container" className={styles.chatContainer}>
         {messages.map((msg, index) => (
-          <ChatMessage className={styles.chatMessage} key={index} message={msg.message} isBot={msg.isBot} />
-        ))}
+ <ChatMessage
+ key={index}
+ message={msg.message}
+ isBot={msg.isBot}
+ className={msg.isBot ? styles.botMessage : styles.userMessage}
+/>       
+ ))}
       </div>
       <div className={styles.inputContainer}>
         <input

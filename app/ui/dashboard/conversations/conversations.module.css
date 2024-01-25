@@ -62,9 +62,25 @@
 }
 
 .chatMessage {
-  padding: 8px;
+  padding: 5px;
   margin: 5px;
   border-radius: 5px;
+  display: flex;
+  justify-content: flex-end; /* Align sender messages to the right */
+}
+
+.userMessage {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.botMessage {
+  background-color: #e3f2fd;
+  color: #000;
+}
+
+.messageContent {
+  max-width: 70%; /* Limit message width for better readability */
 }
 
 .user {
@@ -79,17 +95,6 @@
   color: #000;
 }
 
-/* .userMessage {
-  text-align: right;
-  color: #fff;
-  background-color: #4caf50;
-}
-
-.botMessage {
-  text-align: left;
-  color: #000;
-  background-color: #e3f2fd;
-} */
 
 .inputContainer {
   display: flex;
@@ -149,6 +154,7 @@
   border-radius: 50%;
 }
 
+/* Styling for when the toggle switch is checked (on) */
 input:checked + .slider {
   background-color: #2196f3;
 }
