@@ -38,6 +38,7 @@ const ConversationPage = () => {
             </div>
           ))}
         </div>
+        </div>
         <div className={styles.inputbox}>
           <input
           className={styles.input}
@@ -47,7 +48,7 @@ const ConversationPage = () => {
             onChange={handleInputChange}
           />
           <button className={styles.button} onClick={handleSendMessage}>Send</button>
-        </div>
+        
       </div>
       <style jsx>{`
       .message {

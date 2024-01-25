@@ -34,7 +34,7 @@ const menuItems = [
             },
             {
                 title: "Customer Stats",
-                path: "/#",
+                path: "/dashboard/stats",
                 icon: <IoInformationCircleOutline />,
             },
         ],
