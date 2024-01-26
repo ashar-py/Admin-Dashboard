@@ -121,6 +121,8 @@ const Chatbot = () => {
 
   return (
     <div className={styles.chatbotContainer}>
+            <ToggleSwitch className={styles.toggleSwitch} isEnabled={isEnabled} toggleSwitch={toggleSwitch} />
+
       <div id="chat-container" className={styles.chatContainer}>
         {messages.map((msg, index) => (
           <ChatMessage
@@ -140,7 +142,6 @@ const Chatbot = () => {
         />
         <button onClick={sendMessage}>Send</button>
       </div>
-      <ToggleSwitch className={styles.toggleSwitch} isEnabled={isEnabled} toggleSwitch={toggleSwitch} />
     </div>
   );
 };
