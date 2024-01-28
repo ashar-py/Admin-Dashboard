@@ -44,27 +44,27 @@ const menuItems = [
         list: [
             {
                 title: "Basic Prompt",
-                path: "/#",
+                path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
             {
                 title: "Training Material",
-                path: "/#",
+                path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
             {
                 title: "Business Logic",
-                path: "/#",
+                path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
             {
                 title: "Guardrails",
-                path: "/#",
+                path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
             {
                 title: "FAQs",
-                path: "/#",
+                path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
         ],
