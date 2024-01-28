@@ -1,22 +1,31 @@
 // pages/api/ai.js
-"use client";
-import axios from 'axios';
+//"use client";
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { message } = req.body;
+const axios = require('axios');
+const callApi = async (message) => {
+  try {
+    const data = JSON.stringify({
+      "message": message  
+    });
 
-    try {
-      // You need to replace 'YOUR_AI_API_ENDPOINT' with the actual API endpoint of your AI service
-      const response = await axios.post('YOUR_AI_API_ENDPOINT', { message });
-      const botReply = response.data.reply;
+    const config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/chatCompletion?prefix=bimahublife&phone_no=919496381412',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
 
-      res.status(200).json({ reply: botReply });
-    } catch (error) {
-      console.error('Error communicating with the AI:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  } else {
-    res.status(405).json({ error: 'Method Not Allowed' });
+    const response = await axios.request(config);
+    return response.data.data; // Adjust this line to extract the correct property from the API response
+  } catch (error) {
+    console.error('Error calling the API:', error);
+    throw error;
   }
-}
+};
+
+module.exports = {
+  callApi,
+};
