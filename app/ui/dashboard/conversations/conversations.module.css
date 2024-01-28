@@ -5,12 +5,12 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin: 20px;
   padding: 10px;
+  height: 80vh;
 }
 
 .chatContainer {
-  max-height: 300px;
   overflow-y: auto;
-  height: 90vh;
+  height: 66vh;
 }
 
 .chatMessage {
@@ -66,10 +66,12 @@
 .inputContainer button {
   flex:1;
   padding: 15px;
-  background:blue;
-  color: #fff;
+  background-color: var(--bg);
+  color: var(--text);
+  font-weight: bold;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -110,7 +112,7 @@
 
 /* Styling for when the toggle switch is checked (on) */
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: var(--bg);
 }
 
 input:checked + .slider:before {
