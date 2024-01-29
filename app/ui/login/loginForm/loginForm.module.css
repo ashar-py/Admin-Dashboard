@@ -1,7 +1,7 @@
 .form {
-  background-color: var(--bgSoft);
+  /* background-color: var(--bgSoft); */
   padding: 50px;
-  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   width: 500px;
   height: 500px;
   display: flex;
@@ -9,21 +9,21 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  border: 1px solid var(--bg);
 }
 
 .form input {
   width: 100%;
   padding: 30px;
-  border: 2px solid #2e374a;
+  border: 2px solid var(--bgSoft);
   border-radius: 5px;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: transparent;
 }
 
 .form button {
   width: 100%;
   padding: 30px;
-  background-color: teal;
+  background-color: var(--bg);
   color: var(--text);
   border: none;
   cursor: pointer;
