@@ -12,6 +12,7 @@ import {
 import {IoInformationCircleOutline} from "react-icons/io5";
 import { BiConversation } from "react-icons/bi";
 import { GoBookmark } from "react-icons/go";
+import { auth, signOut } from "@/app/auth";
 
 const menuItems = [
     {
