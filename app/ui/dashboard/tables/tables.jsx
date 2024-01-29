@@ -20,6 +20,18 @@ const Tables = () => {
                             <td>15/01/2024 8:19pm</td>
                             <td>AI</td>
                             </tr>
+                            <tr>
+                        <td><Link className={styles.link} href="./stats/singleStat">Mohan Prabhu</Link></td>
+                            <td>7657637633</td>
+                            <td>14/01/2024 8:19pm</td>
+                            <td>AI</td>
+                            </tr>
+                            <tr>
+                        <td><Link className={styles.link} href="./stats/singleStat">Sachin Patel</Link></td>
+                            <td>7648892787</td>
+                            <td>13/01/2024 7:20pm</td>
+                            <td>Agent</td>
+                            </tr>
                             </tbody>
                             </table>
         </div>

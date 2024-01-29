@@ -42,6 +42,57 @@ const CustomerPage = () => {
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>InsureRight</td>
+                            <td>Insurance</td>
+                            <td>Bike</td>
+                            <td>Rahul Tripathy</td>
+                            <td>9898989898</td>
+                            <td>172, Andheri, Mumbai, 400001</td>
+                            <td>Trial</td>
+                            <td>
+                                <div className={styles.buttons}>
+                                <Link href="/">
+                                    <button className={`${styles.button} ${styles.edit}`}>Edit</button>  
+                                </Link>
+                                <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>InsureRight</td>
+                            <td>Insurance</td>
+                            <td>Bike</td>
+                            <td>Rahul Tripathy</td>
+                            <td>9898989898</td>
+                            <td>172, Andheri, Mumbai, 400001</td>
+                            <td>Trial</td>
+                            <td>
+                                <div className={styles.buttons}>
+                                <Link href="/">
+                                    <button className={`${styles.button} ${styles.edit}`}>Edit</button>  
+                                </Link>
+                                <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>InsureRight</td>
+                            <td>Insurance</td>
+                            <td>Bike</td>
+                            <td>Rahul Tripathy</td>
+                            <td>9898989898</td>
+                            <td>172, Andheri, Mumbai, 400001</td>
+                            <td>Trial</td>
+                            <td>
+                                <div className={styles.buttons}>
+                                <Link href="/">
+                                    <button className={`${styles.button} ${styles.edit}`}>Edit</button>  
+                                </Link>
+                                <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>            
                 </table>
 

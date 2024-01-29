@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: var(--textSoft);
+    background-color: var(--bgSoft);
+    color: var(--text);
     padding: 10px;
     border-radius: 10px;
     width: max-content;
@@ -11,6 +12,5 @@
 .input{
     background-color: transparent;
     border: none;
-    
     outline: none;
 }

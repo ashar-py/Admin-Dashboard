@@ -1,5 +1,6 @@
 .container {
-    height: 80vh;
+    height: 85vh;
+    margin-bottom: 20px;
 }
 
 .top {
@@ -27,8 +28,9 @@
     border-radius: 5px;
     margin-left: 0px;
     font-size:1rem;
-    margin-top: 20px;
+    margin-top: 3%;
     cursor: pointer;
+    max-height: 50px;
 }
 
 .expand:hover {
