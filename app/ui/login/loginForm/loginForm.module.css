@@ -1,5 +1,5 @@
 .form {
-  background-color: var(--bgSoft);
+  background-color: paleturquoise;
   padding: 50px;
   border-radius: 10px;
   width: 500px;
@@ -16,14 +16,14 @@
   padding: 30px;
   border: 2px solid #2e374a;
   border-radius: 5px;
-  background-color: var(--bg);
-  color: var(--text);
+  
+  color: black;
 }
 
 .form button {
   width: 100%;
   padding: 30px;
-  background-color: teal;
+  background-color: blue;
   color: var(--text);
   border: none;
   cursor: pointer;
