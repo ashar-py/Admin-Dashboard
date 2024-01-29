@@ -1,7 +1,12 @@
-const Login = () => {
-    return (
-        <div>Login</div>
-    )
-}
+import styles from "@/app/ui/login/login.module.css";
+import LoginForm from "../ui/login/loginForm/loginForm";
 
-export default Login
+const LoginPage = () => {
+  return (
+    <div className={styles.container}>
+      <LoginForm/>
+    </div>
+  );
+};
+
+export default LoginPage;

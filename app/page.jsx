@@ -1,6 +1,10 @@
 const Homepage = () => {
     return (
-      <div>Homepage</div>
+      <div>
+    <div>Homepage</div><br/>
+    <div>
+      <a  href="/login"> Login to continue</a></div>
+    </div>
     )
   }
   
