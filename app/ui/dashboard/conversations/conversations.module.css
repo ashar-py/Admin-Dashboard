@@ -17,42 +17,32 @@
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
-  display: flex;
-  justify-content: flex-end; /* Align sender messages to the right */
+  display: flexbox;
+  justify-content: center /* Align sender messages to the right */
 }
 
 .userMessage {
   background-color: #4caf50;
   color: #fff;
-  align-items: flex-start;
+  align-items: right;
+  justify-content: right;
 }
 
 .botMessage {
   background-color: skyblue;
   color: #000;
-  align-items: flex-end;
+  align-items: left;
+  justify-content: left;
 }
 
 .messageContent {
   max-width: 70%; /* Limit message width for better readability */
 }
 
-/* .user {
-  background-color: purple;
-  text-align: right;
-  color: #fff;
-}
-
-.bot {
-  background-color: yellow;
-  text-align: left;
-  color: #000;
-} */
-
 
 .inputContainer {
   display: flex;
-  /* flex-direction: column; */
+  
   margin-top: 10px;
   gap: 10px;
 }
@@ -79,12 +69,15 @@
   position: relative;
   display: inline-block;
   width: 60px;
+  
   height: 34px;
 }
 
-/* .toggleSwitch input {
-  display: fle
-} */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
 .slider {
   position: absolute;
@@ -107,6 +100,7 @@
   bottom: 4px;
   background-color: white;
   transition: 0.4s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
