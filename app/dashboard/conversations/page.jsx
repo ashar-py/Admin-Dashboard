@@ -1,7 +1,5 @@
 "use client"; // use client
 import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
-//import styles from "@/app/dashboard/conversations/conversations.module.css";
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ChatMessage from "@/components/chat/chatmessage";
@@ -21,7 +19,7 @@ const Chatbot = () => {
     if (inputMessage.trim() === '') return;
 
     const newMessage = { message: inputMessage, isBot: false };
-    setMessages([...messages, newMessage]);
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
     setInputMessage('');
 
     if (isEnabled) {
@@ -29,16 +27,21 @@ const Chatbot = () => {
         // Call the API and get the response
         const botReply = await callApi(inputMessage);
 
-        const botMessage = { message: botReply, isBot: true };
-        setMessages([...messages, botMessage]);
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { message: botReply, isBot: true },
+        ]);
       } catch (error) {
         console.error('Error communicating with the API:', error);
       }
     } else {
       // Simulate a response from customer support
-      const supportReply = 'Your message has been forwarded to our support team. They will get back to you soon.';
-      const supportMessage = { message: supportReply, isBot: true };
-      setMessages([...messages, supportMessage]);
+      const supportReply =
+        'Your message has been forwarded to our support team. They will get back to you soon.';
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { message: supportReply, isBot: true },
+      ]);
     }
   };
 
@@ -48,8 +51,9 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
-    <div className={styles.chatbotContainer}>
-            <ToggleSwitch className={styles.toggleSwitch} isEnabled={isEnabled} toggleSwitch={toggleSwitch} />
+    <div className={styles.chatbotContainer}> 
+    AI Response
+      <ToggleSwitch className={styles.toggleSwitch} isEnabled={isEnabled} toggleSwitch={toggleSwitch} />
 
       <div id="chat-container" className={styles.chatContainer}>
         {messages.map((msg, index) => (

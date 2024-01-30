@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 const ToggleSwitch = ({ isEnabled, toggleSwitch, className }) => {
   return (
     <label className={`${styles.toggleSwitch} ${className}`}>
-      <input type="checkbox" checked={isEnabled} onChange={toggleSwitch} />
+      <input className={styles.checkbox} type="checkbox" checked={isEnabled} onChange={toggleSwitch} />
       <div className={styles.slider}></div>
     </label>
   );
