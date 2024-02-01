@@ -39,8 +39,10 @@
 
 /* documentsPendingUsers.module.css */
 
-.container {
-    background-color: rgb(200, 75, 242);
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+    background-color: #e2e2e2;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -54,18 +56,33 @@
     margin-top: 16px;
     align-items: center;
     justify-content: center;
-    
+    background-color: white;
   }
   
     .heading {
     
-    padding: 8px;
+    padding: 12px;
     text-align: left;
-    background-color: rgb(236, 233, 39);
+    background-color: var(--bgSoft);
+    color: white;
   }
+  .expand {   
+    border: none;
+    background-color: var(--bg);
+    color: var(--text);
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 0px;
+    font-size:1rem;
+    margin-top: 3%;
+    cursor: pointer;
+    max-height: 50px;
+    margin-bottom: 30px;
+}
   
-  .body {
-    background-color: #e9c8c8;
+  .body{
+    padding: 20px;
     
   }
    
