@@ -58,8 +58,11 @@
 .inputContainer {
   display: flex;
   margin-bottom: 20px;
-  margin-top: 200px;
+  margin-top: 40px;
+  margin-right: 100px;
+  
   gap: 10px;
+  
 }
 
 .inputContainer input {

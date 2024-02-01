@@ -1,4 +1,4 @@
-.container {
+/* .container {
     height: 85vh;
     margin-bottom: 20px;
 }
@@ -35,4 +35,35 @@
 
 .expand:hover {
     text-decoration: underline;
-}
+} */
+
+/* documentsPendingUsers.module.css */
+
+.container {
+    background-color: lightpink;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+   */
+
+
