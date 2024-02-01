@@ -60,7 +60,7 @@ const ActiveUsers = ({ users }) => {
     <div className={styles.container}>
       <h2>Active Users</h2>
       <table className={styles.userTable}>
-        <thead>
+        <thead className={styles.heading}>
           <tr>
             <th>Name</th>
             <th>Phone Number</th>
@@ -68,7 +68,7 @@ const ActiveUsers = ({ users }) => {
             <th>Attended by</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className={styles.body}>
           {users.map((user) => (
             <tr key={user.id}>
               <td>{user.name}</td>

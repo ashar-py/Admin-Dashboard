@@ -6,6 +6,7 @@
   margin-top: auto; /* Change margin-top to auto */
   color: black;
   position: fixed; /* Set position to fixed */
+  overflow:auto;
   bottom: 0; /* Align to the bottom of the viewport */
   left: 0; /* Optionally, you can use left: 0; to align it to the left */
   right: 0; /* Optionally, you can use right: 0; to align it to the right */
