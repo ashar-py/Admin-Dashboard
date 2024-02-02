@@ -63,10 +63,8 @@ const UsersPage = () => {
   return (
     <div className={styles.mainContainer}>
       <ActiveUsers users={activeUsers} />
-      <Link href="about:blank" legacyBehavior={true}>
-      <a target='_blank'>
+      <Link href="/dashboard/data">
         <button className={styles.expand}>Expand Table</button>
-      </a>
       </Link>
       <DocumentsPendingUsers />
       <PaymentLinkPendingUsers />
