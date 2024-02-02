@@ -177,7 +177,7 @@ const Chatbot = () => {
         
       </div>
 
-      {searchType !== 'bimabike' && (
+      {/* {searchType !== 'bimabike' && (
         <div className={styles.inputContainer}>
           <label>Enter phone number:</label>
           <input
@@ -187,7 +187,7 @@ const Chatbot = () => {
             onChange={(e) => setInputMessage(e.target.value)}
           />
         </div>
-      )}
+      )} */}
 
       <ToggleSwitch
         className={styles.toggleSwitch}
