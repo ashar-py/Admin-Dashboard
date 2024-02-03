@@ -38,7 +38,7 @@
 // export default CustomerStat
 
 
-
+"use client";
 
 
 import React from 'react';
@@ -50,28 +50,24 @@ import CompletedUsers from "@/components/stats/completedusers";
 import styles from "@/app/ui/dashboard/stats/stats.module.css"; 
 import Link from "next/link";
 
-const UsersPage = () => {
-  // Dummy data for testing, replace it with your actual user data
-  const activeUsers = [
-    { id: 1, name: 'User 1', phoneNumber: '1234567890', lastActive: '2022-03-01', attendedBy: 'Admin' },
-    { id: 2, name: 'User 2', phoneNumber: '9876543210', lastActive: '2022-03-02', attendedBy: 'User1' },
-    // Add more users as needed
-  ];
 
-  
 
+
+
+const StatsPage = () => {
   return (
     <div className={styles.mainContainer}>
-      <ActiveUsers users={activeUsers} />
+      < ActiveUsers/>
       <Link href="/dashboard/data">
         <button className={styles.expand}>Expand Table</button>
       </Link>
-      <DocumentsPendingUsers />
+      {/* <DocumentsPendingUsers />
       <PaymentLinkPendingUsers />
       <PaymentDueUsers />
-      <CompletedUsers />
+      <CompletedUsers /> */}
     </div>
   );
 };
 
-export default UsersPage;
+export default StatsPage
+  

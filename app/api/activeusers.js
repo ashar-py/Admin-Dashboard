@@ -7,9 +7,10 @@ const fetchActiveUsers = async () => {
     const config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/active/list',
+      url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/active/list?prefix=bimakartbike',
       headers: {
-        'prefix': 'bimahublife'
+        
+        'Content-Type': 'application/json'
       }
     };
 
