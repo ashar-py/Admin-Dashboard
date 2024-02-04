@@ -33,7 +33,9 @@
   width: max-content;
   padding-right: 50px;
   padding-top: 10px;
-
+  background-color: rgb(245, 169, 237);
+  border-radius: 10px;
+margin-top: 10px;
 
 
 }
@@ -99,6 +101,17 @@
             border: none; 
             border-radius: 5px; 
             cursor: pointer; 
+}
+
+.historyButton{
+  background-color: #b55df4;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  
+
 }
 
 .toggleSwitch {

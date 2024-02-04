@@ -89,8 +89,8 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
-    <div className={styles.chatbotContainer}>
-      <div className={styles.topContainer}>
+    <div>
+    <div className={styles.topContainer}>
         <div className={styles.dropdownContainer}>
           <label>Select Search Type:</label>
           <select value={searchType} onChange={handleSearchTypeChange}>
@@ -117,8 +117,10 @@ const Chatbot = () => {
           Enable AI response
         </div>
 
-        <button onClick={retrieveChat}>Retrieve Chat</button>
+        <button className={styles.historyButton} onClick={retrieveChat}>Chat history</button>
       </div>
+    <div className={styles.chatbotContainer}>
+      
 
       <div id="chat-container" className={styles.chatContainer}>
         {messages.map((msg, index) => (
@@ -142,6 +144,7 @@ const Chatbot = () => {
           Send
         </button>
       </div>
+    </div>
     </div>
   );
 };
