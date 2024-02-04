@@ -7,7 +7,7 @@ const fetchActiveUsers = async () => {
     const config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/active/list?prefix=bimakartbike',
+      url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/active/list?prefix=teleforceone',
       headers: {
         
         'Content-Type': 'application/json'

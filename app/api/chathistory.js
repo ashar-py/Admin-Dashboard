@@ -9,7 +9,7 @@ const retrieveChatHistory = async (userPhoneNumber, searchType) => {
         prefix: searchType,
       },
       headers: {
-        'prefix': 'bimahublife',
+        'prefix': 'bimakartbike',
       },
     });
 

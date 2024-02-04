@@ -58,10 +58,10 @@ const StatsPage = () => {
   return (
     <div className={styles.mainContainer}>
       < ActiveUsers/>
-      {/* <Link href="/dashboard/data">
+       <Link href="/dashboard/data">
         <button className={styles.expand}>Expand Table</button>
-      </Link> */}
-      {/* <DocumentsPendingUsers />
+      </Link> 
+     {/* <DocumentsPendingUsers />
       <PaymentLinkPendingUsers />
       <PaymentDueUsers />
       <CompletedUsers /> */}

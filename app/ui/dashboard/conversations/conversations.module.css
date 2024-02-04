@@ -37,6 +37,19 @@
   border-radius: 10px;
 margin-top: 10px;
 
+.dropdown{
+  background-color: #ef33ec;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 
 }
 
@@ -85,11 +98,13 @@ margin-top: 10px;
 }
 
 .inputContainer input {
-  width: calc(100% - 20px); 
+  width: auto; 
             padding: 8px; 
             margin: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
+            align-items: center;
+            justify-content: center;
 
 }
 
