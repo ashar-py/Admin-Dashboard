@@ -61,10 +61,10 @@ const StatsPage = () => {
        <Link href="/dashboard/data">
         <button className={styles.expand}>Expand Table</button>
       </Link> 
-     {/* <DocumentsPendingUsers />
+      <DocumentsPendingUsers />
       <PaymentLinkPendingUsers />
       <PaymentDueUsers />
-      <CompletedUsers /> */}
+      <CompletedUsers />
     </div>
   );
 };

@@ -67,14 +67,10 @@
 
 
 // ActiveUsers.js
-// ActiveUsers.js
 "use client";
 import styles from "@/app/ui/dashboard/stats/stats.module.css";
 import React, { useEffect, useState } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
-
-// ActiveUsers.js
-// ... (import statements)
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
@@ -87,9 +83,13 @@ const ActiveUsers = () => {
         const dataArray = Object.values(dataObject);
 
         // Log the received data to the console to verify
-        console.log("Received Data:", dataArray);
+        //console.log("Received Data:", dataArray);
 
         setActiveUsers(dataArray);
+
+        // Log the updated state
+        //console.log("Mapped data:", dataArray);
+
         setError(null); // Clear any previous errors
       } catch (error) {
         console.error("Error fetching active users:", error);
@@ -112,19 +112,21 @@ const ActiveUsers = () => {
               <th>NAME</th>
               <th>PHONE NUMBER</th>
               <th>STATUS</th>
-              
+              <th>EMAIL</th>
               {/* Add more headers as needed */}
             </tr>
           </thead>
           <tbody>
-            {activeUsers.map((userData) => (
-              <tr key={userData.phone_no}>
-                <td>{userData.name}</td>
-                <td>{userData.phone_no}</td>
-                <td>{userData.status}</td>
-                
-                {/* Add more cells for additional details */}
-              </tr>
+            {activeUsers.map((user) => (
+              Object.entries(user).map(([phoneNo, userData]) => (
+                <tr key={phoneNo}>
+                  <td>{userData.name}</td>
+                  <td>{userData.phone_no}</td>
+                  <td>{userData.status}</td>
+                  <td>{userData.email}</td>
+                  {/* Add more cells for additional details */}
+                </tr>
+              ))
             ))}
           </tbody>
         </table>
@@ -133,5 +135,5 @@ const ActiveUsers = () => {
   );
 };
 
-export default ActiveUsers;
+export default ActiveUsers
 

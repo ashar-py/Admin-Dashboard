@@ -1,24 +1,13 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: auto; /* Change margin-top to auto */
-  color: black;
-  position: fixed; /* Set position to fixed */
-  overflow:auto;
-  bottom: 0; /* Align to the bottom of the viewport */
-  left: 0; /* Optionally, you can use left: 0; to align it to the left */
-  right: 0; /* Optionally, you can use right: 0; to align it to the right */
+
+
+.footer {
+  position:bottom;
+margin-top: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 0px;
+
 }
 
-.logo {
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-}
-
-.text {
-  font-size: 12px;
-  color: black;
-}
