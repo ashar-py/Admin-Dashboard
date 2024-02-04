@@ -48,12 +48,19 @@ const ActiveUsers = () => {
           </thead>
           <tbody>
             {activeUsers.map((user) => (
-              <tr key={user.id}>
+              <tr key={user.phone_no}>
                 <td>{user.name}</td>
                 <td>{user.phone_no}</td>
                 <td>{user.status}</td>
               </tr>
             ))}
+
+            <tr>
+              <td>bhagyesh</td>
+              <td>bhagyesh</td>
+              <td>bhagyesh</td>
+
+            </tr>
           </tbody>
         </table>
       )}

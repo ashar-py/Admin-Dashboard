@@ -1,11 +1,15 @@
 
 .chatbotContainer {
-  max-width: 60%; 
+  max-width: 100%; 
   max-height: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-right: 100px;
+
+  
   background-color: rgb(237, 203, 240); 
   border-radius: 8px; 
   padding-top: 10px;
+
   /* Top right bottom left*/
   /* padding: 5px 50px 400px 10px; */
   overflow: auto;  /* Add overflow property for scrollbar */
@@ -17,8 +21,21 @@
 .chatContainer {
   display: flex; 
   flex-direction: column; 
+  height: 400px;
+  width: 100%;
   
   
+}
+
+.topContainer{
+  display: flex;
+  flex-direction:row;
+  width: max-content;
+  padding-right: 50px;
+  padding-top: 10px;
+
+
+
 }
 
 /* Chat Message Container */
@@ -57,9 +74,9 @@
 
 .inputContainer {
   display: flex;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  margin-right: 100px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
   
   gap: 10px;
   
