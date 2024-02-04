@@ -55,12 +55,7 @@ const ActiveUsers = () => {
               </tr>
             ))}
 
-            <tr>
-              <td>bhagyesh</td>
-              <td>bhagyesh</td>
-              <td>bhagyesh</td>
-
-            </tr>
+           
           </tbody>
         </table>
       )}
