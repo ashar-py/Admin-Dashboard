@@ -245,17 +245,16 @@ const Chatbot = () => {
     <div>
       <div className={styles.topContainer}>
         <div >
-          <label>Select Search Type:</label>
+          <label>Select section</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
             <option value="bimakartbike">Bimakartbike</option>
           </select>
         </div>
 
         <div className={styles.inputContainer}>
-          <label>Add Phone Number</label>
           <input
             type="text"
-            placeholder="e.g., 919422346952"
+            placeholder="Enter Number"
             value={userPhoneNumber}
             onChange={(e) => setUserPhoneNumber(e.target.value)}
           />

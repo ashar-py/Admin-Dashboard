@@ -1,69 +1,28 @@
-/* .container {
-    height: 85vh;
-    margin-bottom: 20px;
-}
 
-.top {
-    margin: 20px;
-}
-
-.h3{
-    display: block;
-    text-align: center;
-}
-
-.active, .closed, .received, .archived {
-    display: flex;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-
-.expand {   
-    border: none;
-    background-color: var(--bg);
-    color: var(--text);
-    font-weight: bold;
-    padding: 5px 20px;
-    border-radius: 5px;
-    margin-left: 0px;
-    font-size:1rem;
-    margin-top: 3%;
-    cursor: pointer;
-    max-height: 50px;
-}
-
-.expand:hover {
-    text-decoration: underline;
-} */
-
-/* documentsPendingUsers.module.css */
 
 .mainContainer {
-  display: flex;
-  flex-direction: column;
-    background-color: #f9f8f8;
+  display:flex;
+  flex-direction:column;
+    background-color: #ee1919;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(247, 244, 247, 0.862);
     margin-top: 20px;
-    margin-right: 200px;
+    margin-right: 20px;
     color: black;
   }
   
   .userTable {
     width: 100%;
-    border-collapse: collapse;
+    
     margin-top: 16px;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+   
+    background-color: rgb(18, 238, 223);
     color: black;
 
   }
   
-    .heading {
-    
+  .heading {
     padding: 5px;
     text-align: left;
     background-color: var(--bgSoft);
