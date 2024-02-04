@@ -60,7 +60,7 @@ const StatsPage = () => {
       </div>
       <br />
 
-      <div>
+      {/* <div>
         <DocumentsPendingUsers />
       </div> <br />
 
@@ -77,7 +77,7 @@ const StatsPage = () => {
       <div>
         {" "}
         <CompletedUsers />
-      </div> <br />
+      </div> <br /> */}
     </div>
   );
 };

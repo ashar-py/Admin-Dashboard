@@ -3,7 +3,7 @@
 .mainContainer {
   display:flex;
   flex-direction:column;
-    background-color: #ee1919;
+    background-color: #198bee;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(247, 244, 247, 0.862);
@@ -49,6 +49,23 @@
     padding: 0px;
     color: black;
 
+  }
+
+  .buttons{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view{
+    background-color: teal;
   }
    
 

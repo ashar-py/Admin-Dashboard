@@ -58,7 +58,8 @@
 
 .chat {
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    padding: 200px;
     gap: 20px;
     display: flex;
     flex-direction: column;

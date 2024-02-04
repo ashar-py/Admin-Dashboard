@@ -3,6 +3,8 @@
 import styles from "@/app/ui/dashboard/stats/stats.module.css";
 import React, { useEffect, useState } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
+import Image from "next/image";
+import Link from "next/link";
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
@@ -22,7 +24,7 @@ const ActiveUsers = () => {
         // Log the updated state
         //console.log("Mapped data:", dataArray);
 
-        setError(null); // Clear any previous errors
+        //setError(null); // Clear any previous errors
       } catch (error) {
         console.error("Error fetching active users:", error);
         setError(error.message || "An error occurred while fetching data.");
@@ -45,21 +47,36 @@ const ActiveUsers = () => {
               <th>PHONE NUMBER</th>
               <th>STATUS</th>
               {/* <th>EMAIL</th> */}
-              
             </tr>
-          </thead> <br />
+          </thead>{" "}
+          <br />
           <tbody>
-            {activeUsers.map((user) => (
+            {activeUsers.map((user) =>
               Object.entries(user).map(([phoneNo, userData]) => (
-                <tr key={phoneNo}>
+                <tr key={userData.assistant_id}>
                   <td>{userData.name}</td>
                   <td>{userData.phone_no}</td>
                   <td>{userData.status}</td>
                   {/* <td>{userData.email}</td> */}
-                  
+
+                  <td>
+                    <div className={styles.buttons}>
+                      <Link href={`/dashboard/stats/${userData.assistant_id}`}>
+                        <button className={`${styles.button} ${styles.view}`}>
+                          View
+                        </button>
+                      </Link>
+                      {/* <form action={deleteUser}>
+                    <input type="hidden" name="id" value={(user.id)} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form> */}
+                    </div>
+                  </td>
                 </tr>
               ))
-            ))}
+            )}
           </tbody>
         </table>
       )}
@@ -67,5 +84,4 @@ const ActiveUsers = () => {
   );
 };
 
-export default ActiveUsers
-
+export default ActiveUsers;

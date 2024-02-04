@@ -1,5 +1,8 @@
+"use client";
 import styles from "@/app/ui/dashboard/stats/singleStat/singleStat.module.css"
 import Image from "next/image"
+import Chatbot from "@/components/chat/chatbot"
+
 
 
 const singleStat = () => {
@@ -31,14 +34,12 @@ const singleStat = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.bottom}>
-                <span>Chat History</span>
-                <div className={styles.chat}>
-                <Image src="/Spinner.gif" width="80" height="80"></Image>
-                <button >Load chat</button>
-                </div>
+            <div >
+                <Chatbot/>
             </div>
+            {/* <Image src="/Spinner.gif" width="80" height="80"></Image> */}
         </div>
+        
     )
 }
 
