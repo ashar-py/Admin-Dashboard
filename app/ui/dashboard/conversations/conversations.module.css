@@ -1,12 +1,11 @@
 
 .chatbotContainer {
+  width: 100%;
   max-width: 100%; 
   max-height: 100%;
   margin-top: 20px;
   margin-right: 100px;
-
-  
-  background-color: rgb(237, 203, 240); 
+  background-color: #e8d2ff;
   border-radius: 8px; 
   padding-top: 10px;
 
@@ -15,6 +14,7 @@
   overflow: auto;  /* Add overflow property for scrollbar */
    /* Set max-height to enable scrolling */
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px;
   
 }
 
@@ -23,28 +23,26 @@
   flex-direction: column; 
   height: 400px;
   width: 100%;
-  
-  
 }
 
 .topContainer{
   display: flex;
   flex-direction:row;
-  width:100% ;
-  padding-right: 50px;
-  padding-top: 10px;
+  gap: 50px;
+  width:100%;
+  padding: 10px 30px 10px 30px;
   background-color: rgb(242, 236, 242);
   border-radius: 10px;
-margin-top: 10px;
+  margin-top: 10px;
 
 .dropdown{
-  background-color: #ef33ec;
+  background-color: var(--bg);
   color: white;
   border-radius: 10px;
   position: relative;
   display: inline-block;
-  margin-top: 10px;
-  padding-top: 10px;
+  margin: 10px;
+  padding: 10px;
   padding-bottom: 10px;
   align-items: center;
   justify-content: center;
@@ -89,17 +87,11 @@ margin-top: 10px;
 
 .inputContainer {
   display: flex;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
-  
-  gap: 10px;
-  
 }
 
 .inputContainer input {
-  width: 80%; 
-            padding: 8px; 
+  width: 90%; 
+            padding: 10px; 
             margin: 10px; 
             border: 1px solid #ddd; 
             border-radius: 5px; 
@@ -109,13 +101,13 @@ margin-top: 10px;
 }
 
 .inputContainer button {
-  padding: 8px; 
-            margin: 10px; 
-            background-color: #ef33ec; 
+  padding: 10px; 
+  margin: 10px; 
+            background-color: var(--bg); 
             color: #fff; 
             border: none; 
             border-radius: 5px; 
-            cursor: pointer; 
+            cursor: pointer;
 }
 
 .historyButton{
@@ -123,20 +115,17 @@ margin-top: 10px;
   color: white;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  
+  padding: 10px;
+  font-weight: bold;
 
 }
 
 .toggleSwitch {
   position: relative;
   display: inline-block;
-
-  margin-top: 0px;
-
+  margin-top: 10px;
+margin-right: 10px;
   width: 60px;
-  
   height: 34px;
 }
 

@@ -39,45 +39,37 @@
 "use client";
 
 import React from "react";
-import ActiveUsers from "@/components/stats/activeusers";
-import DocumentsPendingUsers from "@/components/stats/documentspendingusers";
-import PaymentLinkPendingUsers from "@/components/stats/paymentlinkpendingusers";
-import PaymentDueUsers from "@/components/stats/paymentdueusers";
-import CompletedUsers from "@/components/stats/completedusers";
 import styles from "@/app/ui/dashboard/stats/stats.module.css";
 import Link from "next/link";
 
 const StatsPage = () => {
   return (
-    <div>
-      <div>
-        <ActiveUsers />
+    <div className={styles.container}>
+      <div className={styles.active}>
+        <Link href="./activeusers">Active Users</Link>
         {/* <div>
           <Link href="/dashboard/data">
             <button className={styles.expand}>Expand Table</button>
           </Link>{" "}
         </div> */}
       </div>
-      <br />
+      <div className={styles.pending}>
+      <div className={styles.document}>
+      <Link href="./documentspendingusers">Documents Pending</Link>
+      </div>
 
-      <div>
-        <DocumentsPendingUsers />
-      </div> <br />
+      <div className={styles.payment}>
+        <Link href="./paymentlinkpendingusers">Payment Link Pending</Link>
+      </div>
 
-      <div>
-        {" "}
-        <PaymentLinkPendingUsers />
-      </div>  <br />
+      <div className={styles.due}>
+      <Link href="./paymentdueusers">Payment Due</Link>
+      </div>
+      </div>
 
-      <div>
-        {" "}
-        <PaymentDueUsers />
-      </div> <br />
-
-      <div>
-        {" "}
-        <CompletedUsers />
-      </div> <br />
+      <div className={styles.completed}>
+      <Link href="./completedusers">Completed</Link>
+      </div>
     </div>
   );
 };

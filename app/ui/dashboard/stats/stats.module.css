@@ -87,100 +87,57 @@
 
  /* General Styles */
 
-
-
-
-/* Container Styles */
-.mainContainer {
+.container{
   width: 100%;
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 0 10px;
-  --bg: #f2f2f2; /* Adjust as needed */
-  --text: #333; /* Adjust as needed */
+  margin: 20px;
+  margin-top: 100px;
+  padding: 30px;
 }
 
-/* Table Styles */
-.userTable {
-  width: 100%;
-  margin-top: 10px;
-  border-collapse: collapse;
-}
-
-.body {
-  font-family: 'Arial', sans-serif; /* Adjust as needed */
-  margin: 0;
-  padding: 0;
-}
-
-.userTable thead {
-  font-weight: 600;
-  padding: 10px;
-  background-color: var(--bg);
-  color: var(--text);
+.active, .document, .payment, .due, .completed {
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  width: 300px;
   text-align: center;
-  border-radius: 12px;
-}
-
-.userTable td {
-  padding: 1px;
-  margin-top: 10px;
-  text-align: center;
-   /* Add border for better visibility */
-  border-radius: 10px;
-}
-
-.userTable tr {
-  background-color: #dbdbdb;
-}
-
-/* Button Styles */
-.expand,
-.button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.expand {
-  background-color: var(--bg);
-  color: var(--text);
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
   font-weight: bold;
-  max-height: 50px;
-  margin-bottom: 20px;
+  border: 2px solid var(--bg);
+  
 }
 
-.expand:hover,
-.button:hover {
-  background-color: #9a83eb; /* Add a subtle hover effect */
+.active:hover, .document:hover, .payment:hover, .due:hover, .completed:hover{
+  cursor: pointer;
+  transition: 0.8s;
+  transform: scale(1.1);
+  border-radius: 35px;
 }
 
-.buttons {
+.pending{
   display: flex;
-  gap: 10px;
-  justify-content: center;
 }
 
-.view {
-  background-color: purple;
-  color: white;
+.active{
+  color: #00ff00;
 }
 
-/* Media Query for Responsiveness */
-@media screen and (max-width: 600px) {
-  .mainContainer {
-    padding: 0 10px;
-  }
+.document{
+  color: #d8d100;
 
-  .userTable td {
-    font-size: 0.9rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
 }
 
+.payment{
+  color: orangered;
+}
+
+.due{
+  color: blue;
+
+}
+
+.completed{
+  color: grey;
+}
