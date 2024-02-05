@@ -1,14 +1,19 @@
-"use client";
+//"use client";
 import styles from "@/app/ui/dashboard/stats/singleStat/singleStat.module.css"
 import Image from "next/image"
 import Chatbot from "@/components/chat/chatbot"
+import { fetchUser } from "@/app/lib/data";
 
 
 
-const singleStat = () => {
+  const SingleUserPage = async ({ params }) => {
+  
+    const { assistant_id } = params;
+    const userData = await fetchUser(assistant_id);
+
     return (
         <div className={styles.container}>
-            <span className={styles.title}>Rakesh Kumar - 9898989898</span>
+            <span className={styles.title}>{userData.name}</span>
             <div className={styles.top}>
                 <div className={styles.details}>
                     <span>Customer Details</span>
@@ -43,4 +48,4 @@ const singleStat = () => {
     )
 }
 
-export default singleStat
+export default SingleUserPage

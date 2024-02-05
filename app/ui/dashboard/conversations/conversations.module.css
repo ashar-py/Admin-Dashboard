@@ -30,7 +30,7 @@
 .topContainer{
   display: flex;
   flex-direction:row;
-  width: max-content;
+  width:100% ;
   padding-right: 50px;
   padding-top: 10px;
   background-color: rgb(242, 236, 242);
@@ -98,7 +98,7 @@ margin-top: 10px;
 }
 
 .inputContainer input {
-  width: auto; 
+  width: 80%; 
             padding: 8px; 
             margin: 10px; 
             border: 1px solid #ddd; 

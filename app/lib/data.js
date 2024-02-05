@@ -19,11 +19,11 @@ export const fetchUsers = async (q, page) => {
   }
 };
 
-export const fetchUser = async (id) => {
-  console.log(id);
+export const fetchUser = async (assistant_id) => {
+  console.log(assistant_id);
   try {
     connectToDB();
-    const user = await User.findById(id);
+    const user = await User.findOne(assistant_id);
     return user;
   } catch (err) {
     console.log(err);

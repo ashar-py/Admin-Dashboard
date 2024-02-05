@@ -24,7 +24,7 @@ const ActiveUsers = () => {
         // Log the updated state
         //console.log("Mapped data:", dataArray);
 
-        //setError(null); // Clear any previous errors
+        setError(null); // Clear any previous errors
       } catch (error) {
         console.error("Error fetching active users:", error);
         setError(error.message || "An error occurred while fetching data.");
@@ -50,15 +50,13 @@ const ActiveUsers = () => {
             </tr>
           </thead>{" "}
           <br />
-          <tbody>
+          {/* <tbody>
             {activeUsers.map((user) =>
-              Object.entries(user).map(([phoneNo, userData]) => (
+              Object.entries(user).map(([phone_no,userData  ]) => (
                 <tr key={userData.assistant_id}>
                   <td>{userData.name}</td>
                   <td>{userData.phone_no}</td>
                   <td>{userData.status}</td>
-                  {/* <td>{userData.email}</td> */}
-
                   <td>
                     <div className={styles.buttons}>
                       <Link href={`/dashboard/stats/${userData.assistant_id}`}>
@@ -66,17 +64,50 @@ const ActiveUsers = () => {
                           View
                         </button>
                       </Link>
-                      {/* <form action={deleteUser}>
-                    <input type="hidden" name="id" value={(user.id)} />
-                    <button className={`${styles.button} ${styles.delete}`}>
-                      Delete
-                    </button>
-                  </form> */}
+                      
                     </div>
                   </td>
                 </tr>
               ))
             )}
+          </tbody> */}
+          <tbody className={styles.body}>
+            {activeUsers.map((userData) => {
+              return Object.entries(userData).map(([phone_no, userData]) => {
+                // Check if the required fields are present
+                if (
+                  userData.name &&
+                  userData.phone_no &&
+                  userData.status &&
+                  userData.assistant_id
+                ) {
+                  return (
+                    <tr key={userData.assistant_id}>
+                      <td>{userData.name}</td>
+                      <td>{userData.phone_no}</td>
+                      <td>{userData.status}</td>
+                      <td>
+                        <div className={styles.buttons}>
+                          <Link
+                            href={`/dashboard/stats/${userData.assistant_id}`}
+                          >
+                            <button
+                              className={`${styles.button} ${styles.view}`}
+                            >
+                              View
+                            </button>
+                          </Link>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                } else {
+                  // Handle the case where data is missing or incomplete
+                  console.warn("Incomplete data:", userData);
+                  return null; // Skip rendering for incomplete data
+                }
+              });
+            })}
           </tbody>
         </table>
       )}
