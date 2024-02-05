@@ -1,3 +1,4 @@
+"use client";
 import styles from "@/app/ui/dashboard/customers/customers.module.css"
 import Search from "@/app/ui/dashboard/search/search"
 import Link from 'next/link'
