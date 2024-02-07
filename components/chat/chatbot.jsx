@@ -64,14 +64,14 @@ const Chatbot = () => {
   const retrieveChat = async () => {
     try {
       const chatHistory = await retrieveChatHistory(userPhoneNumber, searchType);
-      console.log('Retrieved chat history:', chatHistory);
+      //console.log('Retrieved chat history:', chatHistory);
   
       // Handle different response types
       const messagesArray = Array.isArray(chatHistory.data)
         ? chatHistory.data
         : chatHistory.data?.messages || [];
   
-      console.log('Processed messages:', messagesArray);
+      //console.log('Processed messages:', messagesArray);
   
       // Display retrieved chat history
       setMessages((prevMessages) => [

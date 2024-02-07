@@ -69,7 +69,7 @@ const ActiveUsers = () => {
                       <td>
                         <div className={styles.buttons}>
                           <Link
-                            href={`/dashboard/stats/${userData.assistant_id}`}
+                            href={`/dashboard/stats/${userData.phone_no}`}
                           >
                             <button
                               className={`${styles.button} ${styles.view}`}
