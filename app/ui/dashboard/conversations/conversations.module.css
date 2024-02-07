@@ -111,6 +111,7 @@
 }
 
 .historyButton{
+  margin-left: auto;
   background-color: #b55df4;
   color: white;
   border-radius: 10px;

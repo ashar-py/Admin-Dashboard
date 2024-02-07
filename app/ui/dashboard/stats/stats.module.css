@@ -7,11 +7,12 @@
   width: 200px; /* Set a fixed width for square tiles */
   height: 200px; /* Set a fixed height for square tiles */
   padding: 20px;
-  margin: 10px;
-  background-color: #f080f0;
+  margin: 45px;
+  background-color: var(--bgSoft);
+  color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +20,9 @@
 }
 
 .tile:hover {
-  background-color: #f0f0f0;
+  background-color: #f4e2ff;
+  color: black;
+  cursor: pointer;
 }
 
 .tile a {
