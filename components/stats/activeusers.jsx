@@ -34,6 +34,8 @@ const ActiveUsers = () => {
     fetchData(); // No need to pass activeUsers here
   }, []); // Empty dependency array to run useEffect only once
 
+  
+
   return (
     <div className={styles.mainContainer}>
       <h4>Active Users</h4>
@@ -56,6 +58,7 @@ const ActiveUsers = () => {
             {activeUsers.map((userData) => {
               return Object.entries(userData).map(([phone_no, userData]) => {
                 // Check if the required fields are present
+                //To do : Inspect the cause of blank rows
                 if (
                   userData.name &&
                   userData.phone_no &&
