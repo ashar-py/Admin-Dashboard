@@ -1,18 +1,13 @@
-const axios = require('axios');
+import axios from 'axios';
 
-let config = {
-  method: 'get',
-  maxBodyLength: Infinity,
-  url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/chatDetails?phone_no=917020416442&prefix=bimakartbike',
-  headers: { 
-    'prefix': 'bimahublife'
-  }
+export const fetchUserInfo = async (phoneNumber) => {
+    try {
+        const response = await axios.get(`https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/chatDetails?phone_no=${phoneNumber}&prefix=bimakartbike`, {
+           
+        });
+        return response.data.data;
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        throw error;
+    }
 };
-
-axios.request(config)
-.then((response) => {
-  console.log(JSON.stringify(response.data));
-})
-.catch((error) => {
-  console.log(error);
-});

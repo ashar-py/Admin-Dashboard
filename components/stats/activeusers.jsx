@@ -62,7 +62,7 @@ const ActiveUsers = () => {
                   userData.assistant_id
                 ) {
                   return (
-                    <tr key={userData.assistant_id}>
+                    <tr key={userData.phone_no}>
                       <td>{userData.name}</td>
                       <td>{userData.phone_no}</td>
                       <td>{userData.status}</td>

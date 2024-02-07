@@ -62,14 +62,14 @@ const UserInfo = ({ phoneNumber }) => {
      
         return (
             <div className={styles.chatHistory}>
-                <h3>Chat History</h3>
-               
-                {chatHistory.map((item, index) => (
-                    <div key={index}>
-                        <p>{item.timestamp}: {item.message}</p>
-                    </div>
-                ))}
-            </div>
+            <h3>Chat History</h3>
+           
+            {chatHistory.map((item, index) => (
+                <div key={item.thread_id || index}> 
+                    <p>{item.timestamp}: {item.message}</p>
+                </div>
+            ))}
+        </div>
         );
     };
 
@@ -118,6 +118,3 @@ const UserInfo = ({ phoneNumber }) => {
 };
 
 export default UserInfo;
-
-
-
