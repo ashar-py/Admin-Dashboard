@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
 import Image from "next/image";
 import Link from "next/link";
+import Pagination from "@/app/ui/dashboard/pagination/pagination";
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
@@ -94,7 +95,9 @@ const ActiveUsers = () => {
             })}
           </tbody>
         </table>
+        
       )}
+      <Pagination/>
     </div>
   );
 };
