@@ -46,6 +46,7 @@ const ActiveUsers = () => {
               <th>NAME</th>
               <th>PHONE NUMBER</th>
               <th>STATUS</th>
+              <th></th>
               {/* <th>EMAIL</th> */}
             </tr>
           </thead>{" "}
