@@ -8,12 +8,12 @@ import { fetchUser } from "@/app/lib/data";
 
   const SingleUserPage = async ({ params }) => {
   
-    const { assistant_id } = params;
-    const userData = await fetchUser(assistant_id);
+    const { user } = params;
+    const userData = await fetchUser(user);
 
     return (
         <div className={styles.container}>
-            <span className={styles.title}>{userData.name}</span>
+            <span className={styles.title}>{user.name}</span>
             <div className={styles.top}>
                 <div className={styles.details}>
                     <span>Customer Details</span>
@@ -39,9 +39,7 @@ import { fetchUser } from "@/app/lib/data";
                     </div>
                 </div>
             </div>
-            <div >
-                <Chatbot/>
-            </div>
+            
             {/* <Image src="/Spinner.gif" width="80" height="80"></Image> */}
         </div>
         
