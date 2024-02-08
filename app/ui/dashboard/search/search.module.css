@@ -1,16 +1,17 @@
-.container{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--bgSoft);
-    color: var(--text);
-    padding: 10px;
-    border-radius: 10px;
-    width: max-content;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(24, 149, 227);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
 }
 
-.input{
-    background-color: transparent;
-    border: none;
-    outline: none;
+.input {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  outline: none;
 }
