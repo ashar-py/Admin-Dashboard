@@ -1,12 +1,11 @@
 // ActiveUsers.js
 "use client";
-import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 import React, { useEffect, useState } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
-import Image from "next/image";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from '@/app/ui/dashboard/search/search';
+import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
@@ -62,7 +61,7 @@ const ActiveUsers = () => {
                         <div className={styles.buttons}>
                           <Link
                             href={{
-                              pathname: "./active/${userData.phone_no}",
+                              pathname: "./${phoneNumber}",
                               query: { phoneNumber: userData.phone_no }
                             }}
                             className={`${styles.button} ${styles.view}`}
@@ -88,6 +87,7 @@ const ActiveUsers = () => {
 };
 
 export default ActiveUsers;
+
 
 
 

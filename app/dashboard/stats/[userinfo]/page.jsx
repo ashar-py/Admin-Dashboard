@@ -136,23 +136,24 @@ import Image from "next/image";
 
 const UserInfo = () => {
     const router = useRouter();
+    const URL = router.push.phoneNumber;
     const [userData, setUserData] = useState(null);
     const [chatHistory, setChatHistory] = useState(null); 
     const [loading, setLoading] = useState(false); 
 
     useEffect(() => {
-        const fetchData = async () => {
-            if (!router.query.phoneNumber) return; // Exit if phoneNumber is undefined
+        const phoneNumber = URL || ''; // Default value if undefined
 
+        const fetchData = async () => {
             setLoading(true);
 
             try {
                 // Fetch user data
-                const userData = await fetchUserInfo(router.query.phoneNumber);
+                const userData = await fetchUserInfo(phoneNumber);
                 setUserData(userData);
 
                 // Fetch chat history
-                const history = await retrieveChatHistory(router.query.phoneNumber, 'bimakartbike');
+                const history = await retrieveChatHistory(phoneNumber, 'bimakartbike');
                 setChatHistory(history);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -162,7 +163,7 @@ const UserInfo = () => {
         };
 
         fetchData();
-    }, [router.query.phoneNumber]);
+    }, [URL]); 
 
     return (
         <div className={styles.container}>
@@ -216,6 +217,7 @@ const UserInfo = () => {
 };
 
 export default UserInfo;
+
 
 
 
