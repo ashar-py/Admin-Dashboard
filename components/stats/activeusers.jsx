@@ -88,24 +88,24 @@
 
 // export default ActiveUsers;
 
-
-
-
-
 "use client";
-import styles from "@/app/ui/dashboard/stats/table/list.module.css";
-import React, { useEffect, useState } from "react";
-import { fetchActiveUsers } from "@/app/api/activeusers";
-import Image from "next/image";
-import Link from "next/link";
-import Pagination from "@/app/ui/dashboard/pagination/pagination";
-import UserInfo from "@/components/stats/userinfo";
 
+import React, { useState, useEffect } from "react";
+import { fetchActiveUsers } from "@/app/api/activeusers";
+import UserInfo from "@/components/stats/userinfo";
+import Link from "next/link";
+import styles from "@/app/ui/dashboard/stats/table/list.module.css";
+
+export const useSelectedPhoneNo = () => {
+  const [selectedPhoneNo, setSelectedPhoneNo] = useState(null);
+
+  return { selectedPhoneNo, setSelectedPhoneNo };
+};
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [error, setError] = useState(null);
-  const [selectedPhoneNo, setSelectedPhoneNo] = useState([]); 
+  const { selectedPhoneNo, setSelectedPhoneNo } = useSelectedPhoneNo();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -123,17 +123,13 @@ const ActiveUsers = () => {
     fetchData();
   }, []);
 
-  
-
   return (
-    
-    
-    <div className={styles.mainContainer}>
+    <div>
       <h4>Active Users</h4>
       {error ? (
         <p>Error: {error}</p>
       ) : (
-        <table className={styles.userTable}>
+        <table>
           <thead>
             <tr>
               <th>NAME</th>
@@ -142,7 +138,7 @@ const ActiveUsers = () => {
               <th></th>
             </tr>
           </thead>
-          <tbody className={styles.body}>
+          <tbody>
             {activeUsers.map((userData) => {
               return Object.entries(userData).map(([phone_no, userData]) => {
                 if (
@@ -157,21 +153,23 @@ const ActiveUsers = () => {
                       <td>{userData.phone_no}</td>
                       <td>{userData.status}</td>
                       <td>
-                        
-                        
-                        <div className={styles.buttons}>
-                         
-                          
-                          <button
+                        {/* <button
                           
                           onClick={() => setSelectedPhoneNo(userData.phone_no)}
                             
                             className={`${styles.button} ${styles.view}`}    >
                             View
+                          </button> */}
+                        <a href="./userinfo">
+                          <button
+                            className={`${styles.button} ${styles.view}`}
+                            onClick={() =>
+                              setSelectedPhoneNo(userData.phone_no)
+                            }
+                          >
+                            View
                           </button>
-                        </div>
-                        
-                       
+                        </a>
                       </td>
                     </tr>
                   );
@@ -184,27 +182,9 @@ const ActiveUsers = () => {
           </tbody>
         </table>
       )}
-      <Pagination />
-    
-      {selectedPhoneNo && (
-        <UserInfo phoneNumber={selectedPhoneNo} />
-      )}
+      {/* {selectedPhoneNo && <UserInfo phoneNumber={selectedPhoneNo} />}  */}
     </div>
-    
   );
 };
 
 export default ActiveUsers;
-
-
-
-
-
-
-
-
-
- 
-
-
-
