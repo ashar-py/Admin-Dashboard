@@ -1,6 +1,5 @@
 // ActiveUsers.js
 "use client";
-
 import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 import React, { useEffect, useState } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
@@ -63,14 +62,12 @@ const ActiveUsers = () => {
                         <div className={styles.buttons}>
                           <Link
                             href={{
-                              pathname: `${userData.phone_no}`,
+                              pathname: "./active/${userData.phone_no}",
                               query: { phoneNumber: userData.phone_no }
                             }}
                             className={`${styles.button} ${styles.view}`}
                           >
-                             
-                              View
-                            
+                            View
                           </Link>
                         </div>
                       </td>
@@ -91,6 +88,7 @@ const ActiveUsers = () => {
 };
 
 export default ActiveUsers;
+
 
 
 
