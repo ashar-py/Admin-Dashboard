@@ -104,8 +104,8 @@ const Sidebar = () => {
           height="50"
         />
                 <div className={styles.userDetail}>
-                    <span className={styles.username}>John Doe</span>
-                    <span className={styles.userTitle}>Adminitstrator</span>
+                    <span className={styles.username}>Trini AI</span>
+                    <span className={styles.userTitle}>Administrator</span>
                 </div>
             </div>
             <ul className={styles.list}>
