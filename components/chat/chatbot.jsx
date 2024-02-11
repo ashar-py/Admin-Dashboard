@@ -180,6 +180,7 @@ const Chatbot = () => {
   const [inputMessage, setInputMessage] = useState('');
   const [searchType, setSearchType] = useState('bimakartbike');
   const [userPhoneNumber, setUserPhoneNumber] = useState('');
+  const [isPhoneNumberEntered, setIsPhoneNumberEntered] = useState(false);
   const chatContainerRef = useChatScroll(messages);
 
   const handleSearchTypeChange = (event) => {
@@ -196,15 +197,13 @@ const Chatbot = () => {
     setIsEnabled(!isEnabled);
   };
 
-  const isSendButtonDisabled = () => {
-    return (
-      !isValidPhoneNumber(userPhoneNumber) ||
-      !inputMessage.trim()
-    );
-  };
-
   const sendMessage = async () => {
     if (inputMessage.trim() === '') return;
+
+    if (!isValidPhoneNumber(userPhoneNumber)) {
+      alert('Please enter a valid phone number first.');
+      return;
+    }
 
     const newUserMessage = { role: 'user', content: inputMessage };
     setMessages((prevMessages) => [...prevMessages, newUserMessage]);
@@ -229,6 +228,16 @@ const Chatbot = () => {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      if (!isValidPhoneNumber(userPhoneNumber)) {
+        alert('Please enter a valid phone number first.');
+      } else {
+        sendMessage();
+      }
+    }
+  };
+  
   const retrieveChat = async () => {
     try {
       const chatHistory = await retrieveChatHistory(userPhoneNumber, searchType);
@@ -244,6 +253,11 @@ const Chatbot = () => {
     } catch (error) {
       console.error('Error retrieving chat history:', error);
     }
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    setUserPhoneNumber(event.target.value);
+    setIsPhoneNumberEntered(!!event.target.value && isValidPhoneNumber(event.target.value));
   };
 
   return (
@@ -262,7 +276,7 @@ const Chatbot = () => {
             type="text"
             placeholder="Enter Number"
             value={userPhoneNumber}
-            onChange={(e) => setUserPhoneNumber(e.target.value)}
+            onChange={handlePhoneNumberChange}
           />
         </div>
 
@@ -298,8 +312,9 @@ const Chatbot = () => {
             placeholder="Type your message..."
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
+            onKeyPress={handleKeyPress} // Added event listener
           />
-          <button onClick={sendMessage} disabled={isSendButtonDisabled()}>
+          <button onClick={sendMessage} disabled={!isPhoneNumberEntered}>
             Send
           </button>
         </div>
@@ -308,6 +323,10 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+
+
+
+
 
 
 
