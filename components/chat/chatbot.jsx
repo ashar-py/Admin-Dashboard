@@ -261,9 +261,9 @@ const Chatbot = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.topContainer}>
-        <div >
+        <div>
           <label>Select section</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
             <option value="bimakartbike">Bimakartbike</option>
