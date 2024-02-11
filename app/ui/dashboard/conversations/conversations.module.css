@@ -1,29 +1,33 @@
 
+
+
 .chatbotContainer {
   width: 100%;
-  max-width: 100%; 
-  max-height: 100%;
-  margin-top: 20px;
-  margin-right: 100px;
-  background-color: #e8d2ff;
-  border-radius: 8px; 
-  padding-top: 10px;
-
-  /* Top right bottom left*/
-  /* padding: 5px 50px 400px 10px; */
-  overflow: auto;  /* Add overflow property for scrollbar */
-   /* Set max-height to enable scrolling */
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); 
-  margin-bottom: 20px;
+  height: 100vh; 
   
+  background-color: #e8d2ff;
+  border-radius: 8px;
+  padding: 50px;
+  padding-top: 50px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0px;
+  margin-top: 20px;
+ 
+  overflow-y: auto; 
+ 
 }
 
 .chatContainer {
-  display: flex; 
-  flex-direction: column; 
-  height: 400px;
-  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y:auto;
+  scroll-behavior: smooth; 
+  
 }
+
+
 
 .topContainer{
   display: flex;
@@ -62,6 +66,7 @@
             display: flex; 
             align-items: center; 
             
+            
 }
 
 /* User Message Style (Sender) */
@@ -69,6 +74,7 @@
   background-color: #e1c8e1; 
             color: #000; 
             align-self: flex-end; 
+           
 }
 
 /* Bot Message Style (Receiver) */
@@ -76,12 +82,14 @@
   background-color: #b55df4; 
             color: #fff; 
             align-self: flex-start; 
+           
 }
 
 
 
 .messageContent {
   max-width: 100%; /* Limit message width for better readability */
+  
 }
 
 
