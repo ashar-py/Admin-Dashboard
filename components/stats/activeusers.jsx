@@ -1,15 +1,23 @@
-// ActiveUsers.js
+
+
 // "use client";
-// import React, { useEffect, useState } from "react";
+
+// import React, { useState, useEffect } from "react";
 // import { fetchActiveUsers } from "@/app/api/activeusers";
+// import UserInfo from "@/components/stats/userinfo";
 // import Link from "next/link";
-// import Pagination from "@/app/ui/dashboard/pagination/pagination";
-// import Search from '@/app/ui/dashboard/search/search';
 // import styles from "@/app/ui/dashboard/stats/table/list.module.css";
+
+// export const useSelectedPhoneNo = () => {
+//   const [selectedPhoneNo, setSelectedPhoneNo] = useState(null);
+
+//   return { selectedPhoneNo, setSelectedPhoneNo };
+// };
 
 // const ActiveUsers = () => {
 //   const [activeUsers, setActiveUsers] = useState([]);
 //   const [error, setError] = useState(null);
+//   const { selectedPhoneNo, setSelectedPhoneNo } = useSelectedPhoneNo();
 
 //   useEffect(() => {
 //     const fetchData = async () => {
@@ -28,13 +36,12 @@
 //   }, []);
 
 //   return (
-//     <div className={styles.mainContainer}>
-//       <Search placeholder="Search for a user..." />
+//     <div>
 //       <h4>Active Users</h4>
 //       {error ? (
 //         <p>Error: {error}</p>
 //       ) : (
-//         <table className={styles.userTable}>
+//         <table>
 //           <thead>
 //             <tr>
 //               <th>NAME</th>
@@ -43,7 +50,7 @@
 //               <th></th>
 //             </tr>
 //           </thead>
-//           <tbody className={styles.body}>
+//           <tbody>
 //             {activeUsers.map((userData) => {
 //               return Object.entries(userData).map(([phone_no, userData]) => {
 //                 if (
@@ -53,22 +60,20 @@
 //                   userData.assistant_id
 //                 ) {
 //                   return (
-//                     <tr key={userData.phone_no}>
+//                     <tr key={userData.assistant_id}>
 //                       <td>{userData.name}</td>
 //                       <td>{userData.phone_no}</td>
 //                       <td>{userData.status}</td>
 //                       <td>
-//                         <div className={styles.buttons}>
-//                           <Link
-//                             href={{
-//                               pathname: "./${phoneNumber}",
-//                               query: { phoneNumber: userData.phone_no }
-//                             }}
-//                             className={`${styles.button} ${styles.view}`}
-//                           >
+//                         <button
+                          
+//                           onClick={() => setSelectedPhoneNo(userData.phone_no)}
+                            
+//                             className={`${styles.button} ${styles.view}`}    >
 //                             View
-//                           </Link>
-//                         </div>
+//                           </button>
+                        
+                        
 //                       </td>
 //                     </tr>
 //                   );
@@ -81,7 +86,7 @@
 //           </tbody>
 //         </table>
 //       )}
-//       <Pagination />
+//       {selectedPhoneNo && <UserInfo phoneNumber={selectedPhoneNo} />} 
 //     </div>
 //   );
 // };
@@ -89,23 +94,17 @@
 // export default ActiveUsers;
 
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
 import UserInfo from "@/components/stats/userinfo";
 import Link from "next/link";
 import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 
-export const useSelectedPhoneNo = () => {
-  const [selectedPhoneNo, setSelectedPhoneNo] = useState(null);
-
-  return { selectedPhoneNo, setSelectedPhoneNo };
-};
 
 const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [error, setError] = useState(null);
-  const { selectedPhoneNo, setSelectedPhoneNo } = useSelectedPhoneNo();
+  const [selectedPhoneNo, setSelectedPhoneNo] = useState(null); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -129,60 +128,57 @@ const ActiveUsers = () => {
       {error ? (
         <p>Error: {error}</p>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>NAME</th>
-              <th>PHONE NUMBER</th>
-              <th>STATUS</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {activeUsers.map((userData) => {
-              return Object.entries(userData).map(([phone_no, userData]) => {
-                if (
-                  userData.name &&
-                  userData.phone_no &&
-                  userData.status &&
-                  userData.assistant_id
-                ) {
-                  return (
-                    <tr key={userData.assistant_id}>
-                      <td>{userData.name}</td>
-                      <td>{userData.phone_no}</td>
-                      <td>{userData.status}</td>
-                      <td>
-                        {/* <button
-                          
-                          onClick={() => setSelectedPhoneNo(userData.phone_no)}
-                            
-                            className={`${styles.button} ${styles.view}`}    >
-                            View
-                          </button> */}
-                        <a href="./userinfo">
-                          <button
+        <>
+          <table className={styles.mainTable}>
+            <thead>
+              <tr>
+                <th>NAME</th>
+                <th>PHONE NUMBER</th>
+                <th>STATUS</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {activeUsers.map((userData) => {
+                return Object.entries(userData).map(([phone_no, userData]) => {
+                  if (
+                    userData.name &&
+                    userData.phone_no &&
+                    userData.status &&
+                    userData.assistant_id
+                  ) {
+                    return (
+                      <tr key={userData.assistant_id}>
+                        <td>{userData.name}</td>
+                        <td>{userData.phone_no}</td>
+                        <td>{userData.status}</td>
+                        <td>
+                          <button 
+                            onClick={() => setSelectedPhoneNo(userData.phone_no)}
                             className={`${styles.button} ${styles.view}`}
-                            onClick={() =>
-                              setSelectedPhoneNo(userData.phone_no)
-                            }
                           >
                             View
                           </button>
-                        </a>
-                      </td>
-                    </tr>
-                  );
-                } else {
-                  console.warn("Incomplete data:", userData);
-                  return null;
-                }
-              });
-            })}
-          </tbody>
-        </table>
+                        </td>
+                      </tr>
+                    );
+                  } else {
+                    console.warn("Incomplete data:", userData);
+                    return null;
+                  }
+                });
+              })}
+            </tbody>
+          </table>
+          {selectedPhoneNo && (
+            <div className={styles.popup}>
+              <button className={styles.button} onClick={() => setSelectedPhoneNo(null)}>Close</button>
+              <UserInfo phoneNumber={selectedPhoneNo} /> 
+              
+            </div>
+          )}
+        </>
       )}
-      {/* {selectedPhoneNo && <UserInfo phoneNumber={selectedPhoneNo} />}  */}
     </div>
   );
 };
