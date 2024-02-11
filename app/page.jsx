@@ -1,9 +1,12 @@
+
+
 const Homepage = () => {
     return (
-      <div>
-    <div>Homepage</div><br/>
+      <div >
     <div>
-      <a  href="/login"> Login to continue</a></div>
+      <h2>Homepage</h2></div><br/>
+    <div>
+      <a  href="/login"> Click here to login</a></div>
     </div>
     )
   }
