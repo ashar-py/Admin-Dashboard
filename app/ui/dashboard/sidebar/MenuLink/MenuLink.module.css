@@ -10,4 +10,5 @@
 
 .container:hover, .active{
     background-color: var(--bgSoft);
+    
 }

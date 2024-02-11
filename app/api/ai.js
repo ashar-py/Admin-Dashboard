@@ -1,8 +1,6 @@
-// // pages/api/ai.js
-// //"use client";
-
 // const axios = require('axios');
-// const callApi = async (message) => {
+
+// const callApi = async (message, prefix, phoneNumber) => {
 //   try {
 //     const data = JSON.stringify({
 //       "message": message  
@@ -11,7 +9,7 @@
 //     const config = {
 //       method: 'post',
 //       maxBodyLength: Infinity,
-//       url: 'https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/chatCompletion?prefix=bimahublife&phone_no=919496381412',
+//       url: `https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/chatCompletion?prefix=${prefix}&phone_no=${phoneNumber}`,
 //       headers: { 
 //         'Content-Type': 'application/json'
 //       },
@@ -29,6 +27,7 @@
 // module.exports = {
 //   callApi,
 // };
+
 
 const axios = require('axios');
 

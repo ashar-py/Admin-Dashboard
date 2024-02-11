@@ -89,6 +89,7 @@ const Chatbot = () => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
   }, [messages]);
 
+  
   return (
     <div>
       <div className={styles.topContainer}>
@@ -96,6 +97,7 @@ const Chatbot = () => {
           <label>Select section</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
             <option value="bimakartbike">Bimakartbike</option>
+            <option value="dmrchr">dmrchr</option>
           </select>
         </div>
 
