@@ -1,18 +1,17 @@
- 
+.container{
+  height: fill;
+}
 
 .chatbotContainer {
-  width: 90%;
-  height: 65vh;
-  
-  margin-left: 20px;
-  margin-right: 40px;
-  background-color: hwb(280 95% 4%);
+  width: 100%;
+  height: 77vh;
+  margin-top: 20px;
+  background-color: #e8d2ff;
   border-radius: 8px;
   padding: 50px;
   padding-top: 50px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
   overflow-y: auto; 
-  
  
 }
 
@@ -28,7 +27,7 @@
 
 
 
-.navContainer{
+.topContainer{
   display: flex;
   flex-direction:row;
   gap: 50px;
@@ -92,30 +91,22 @@
 }
 
 
-.inputTopContainer {
+.inputContainer {
   display: flex;
-  margin-top: 10px;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  border-radius: 80px;
-  
-  }
-
-.inputBottomContainer input {
- 
-  width: 70%; 
-            padding: 10px; 
-            margin: 10px; 
-
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            
-            margin-left: 80px;
-     
 }
 
-.inputBottomContainer button {
+.inputContainer input {
+  width: 90%; 
+            padding: 10px; 
+            margin: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            align-items: center;
+            justify-content: center;
+
+}
+
+.inputContainer button {
   padding: 10px; 
   margin: 10px; 
             background-color: var(--bg); 
@@ -191,4 +182,9 @@ input:checked + .slider:before {
 }
 
 
-
+@media only screen and (max-width: 768px) {
+  .mainTable th,
+  .mainTable td {
+    padding: 10px; /* Decreased padding for smaller screens */
+  }
+}
