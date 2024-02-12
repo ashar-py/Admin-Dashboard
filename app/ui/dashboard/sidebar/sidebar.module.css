@@ -1,6 +1,7 @@
 .container{
     position: sticky;
-    top: 40px;
+    top: 20px;
+    height: 100vh;
     max-height: 100%;
 }
 
