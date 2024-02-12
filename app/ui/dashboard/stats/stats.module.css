@@ -1,13 +1,15 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .tile {
   width: 200px; /* Set a fixed width for square tiles */
   height: 200px; /* Set a fixed height for square tiles */
   padding: 20px;
-  margin: 45px;
+  margin: auto;
+  margin-top: 40px;
   background-color: var(--bgSoft);
   color: white;
   border-radius: 8px;
@@ -23,6 +25,8 @@
   background-color: #f4e2ff;
   color: black;
   cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.7s;
 }
 
 .tile a {
