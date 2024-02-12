@@ -4,8 +4,8 @@
 
 .chatbotContainer {
   width: 100%;
-  height: 77vh;
-  margin-top: 20px;
+  height: 63vh;
+  margin-top: 5px;
   background-color: #e8d2ff;
   border-radius: 8px;
   padding: 50px;
@@ -35,7 +35,7 @@
   padding: 10px 30px 10px 30px;
   background-color: rgb(242, 236, 242);
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 
 .dropdown{
   background-color: var(--bg);
