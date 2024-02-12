@@ -1,14 +1,18 @@
-
+.title{
+  display: block;
+  text-align: center;
+  margin: 30px;
+}
 
 .mainTable {
-  width: 100%;
+  width: 95%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 
 .mainTable th,
 .mainTable td {
-  border: 1px solid #ddd;
+  border-bottom: 0.7px solid #f2f2f2;
   padding: 12px; /* Increased padding for better readability */
   text-align: left;
 }

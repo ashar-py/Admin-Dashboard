@@ -97,7 +97,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
 import UserInfo from "@/components/stats/userinfo";
-import Link from "next/link";
 import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 
 
@@ -123,8 +122,8 @@ const ActiveUsers = () => {
   }, []);
 
   return (
-    <div>
-      <h4>Active Users</h4>
+    <div className={styles.container}>
+      <h4 className={styles.title}>Active Users</h4>
       {error ? (
         <p>Error: {error}</p>
       ) : (
@@ -135,7 +134,7 @@ const ActiveUsers = () => {
                 <th>NAME</th>
                 <th>PHONE NUMBER</th>
                 <th>STATUS</th>
-                <th></th>
+                <th>ACTION</th>
               </tr>
             </thead>
             <tbody>
