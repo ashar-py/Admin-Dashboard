@@ -44,7 +44,7 @@
   background-color: var(--bg);
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -71,4 +71,18 @@
 .chatHistory p {
   margin: 8px 0;
   color: #555;
+}
+
+.chatMessage {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.userMessage {
+  text-align: right;
+}
+
+.assistantMessage {
+  text-align: left;
 }

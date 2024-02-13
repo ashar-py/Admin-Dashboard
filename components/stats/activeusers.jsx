@@ -170,10 +170,12 @@ const ActiveUsers = () => {
             </tbody>
           </table>
           {selectedPhoneNo && (
+            <div  className={styles.popupOverlay}>
             <div className={styles.popup}>
               <button className={styles.button} onClick={() => setSelectedPhoneNo(null)}>Close</button>
               <UserInfo phoneNumber={selectedPhoneNo} /> 
               
+            </div>
             </div>
           )}
         </>
