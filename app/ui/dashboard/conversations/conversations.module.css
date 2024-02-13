@@ -17,7 +17,7 @@
 
 .chatContainer {
   
-  display: flex;
+  
   flex-direction: column;
   flex-grow: 1;
   overflow-y:auto;
@@ -80,7 +80,9 @@
   background-color: var(--dark); 
             color: #fff; 
             align-self: flex-start;
-            border-radius: 5px; 
+            border-radius: 5px;
+            padding-right: 50px;
+            margin-right: 100px;
            
 }
 

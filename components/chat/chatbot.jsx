@@ -141,8 +141,9 @@ const Chatbot = () => {
           Chat history
         </button>
       </div>
-
+      
       <div className={styles.chatbotContainer} ref={chatContainerRef}>
+      <pre>
         <div className={styles.chatContainer}>
           {messages.map((msg, index) => (
             <ChatMessage
@@ -154,7 +155,10 @@ const Chatbot = () => {
           ))}
           {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}
         </div>
+        </pre>
       </div>
+
+      
       <div className={styles.inputContainer}>
           <input
             type="text"
