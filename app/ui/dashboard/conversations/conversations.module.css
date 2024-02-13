@@ -77,7 +77,7 @@
 
 /* Bot Message Style (Receiver) */
 .botMessage {
-  background-color: var(--dark); 
+  background-color: var(--bg); 
             color: #fff; 
             align-self: flex-start;
             border-radius: 5px; 
@@ -112,7 +112,7 @@
   flex: 1;
   padding-right: 0px; 
   margin: 10px; 
-            background-color: var(--dark); 
+            background-color: var(--bg); 
             color: #fff; 
             border: none; 
             border-radius: 20px; 
@@ -121,7 +121,7 @@
 
 .historyButton{
   
-  background-color: var(--dark);
+  background-color: var(--bg);
   color: white;
   border-radius: 10px;
   cursor: pointer;
