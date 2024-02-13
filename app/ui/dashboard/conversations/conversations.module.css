@@ -79,7 +79,8 @@
 .botMessage {
   background-color: #b55df4; 
             color: #fff; 
-            align-self: flex-start; 
+            align-self: flex-start;
+            border-radius: 5px; 
            
 }
 

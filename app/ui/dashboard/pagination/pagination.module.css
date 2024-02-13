@@ -1,12 +1,15 @@
 .container{
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
   }
   
   .button{
+    background-color: transparent;
+    margin: 40px;
     padding: 5px 10px;
     cursor: pointer;
+    border: none;
   }
   
   .button:disabled{

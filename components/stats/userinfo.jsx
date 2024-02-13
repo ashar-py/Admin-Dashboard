@@ -50,7 +50,12 @@ const UserInfo = ({ phoneNumber }) => {
   return (
     <div className={styles.container}>
       <span className={styles.title}>User Information</span>
-      {loadingUserData }
+      {loadingUserData ? <Image
+            src="/Rolling.gif"
+            width="60"
+            height="60"
+            alt="Loading.."
+          />:<br></br>}
       {userData && (
         <div className={styles.userInfoContainer}>
           <div className={styles.tile}>
@@ -95,14 +100,10 @@ const UserInfo = ({ phoneNumber }) => {
           </div>
         </div>
       )}
+      <br></br>
       <button onClick={handleChatHistoryClick} className={styles.toggleButton}>
         {loadingChatHistory ? (
-          <Image
-            src="/Spinner.gif"
-            width="60"
-            height="60"
-            alt="Loading Spinner"
-          />
+          <p></p>
         ) : showChatHistory ? (
           "Hide Chat History"
         ) : (

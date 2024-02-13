@@ -309,7 +309,7 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
-          {loading && <img src="/spinner.gif" width="60" height="60" alt="Loading..." />} {/* Rendering spinner when loading */}
+          <div className={styles.botMessage}>{loading && <img src="/Loading.gif" width="60" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}</div>
         </div>
       </div>
       <div className={styles.inputContainer}>
