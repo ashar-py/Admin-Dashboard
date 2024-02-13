@@ -181,6 +181,7 @@ const Chatbot = () => {
   const [searchType, setSearchType] = useState('bimakartbike');
   const [userPhoneNumber, setUserPhoneNumber] = useState('');
   const [isPhoneNumberEntered, setIsPhoneNumberEntered] = useState(false);
+  const [loading, setLoading] = useState(false); // State for loading spinner
   const chatContainerRef = useChatScroll(messages);
 
   const handleSearchTypeChange = (event) => {
@@ -208,6 +209,7 @@ const Chatbot = () => {
     const newUserMessage = { role: 'user', content: inputMessage };
     setMessages((prevMessages) => [...prevMessages, newUserMessage]);
     setInputMessage('');
+    setLoading(true); // Start loading spinner
 
     if (isEnabled) {
       try {
@@ -219,12 +221,15 @@ const Chatbot = () => {
         setMessages((prevMessages) => [...prevMessages, newBotMessage]);
       } catch (error) {
         console.error('Error communicating with the API:', error);
+      } finally {
+        setLoading(false); // Stop loading spinner
       }
     } else {
       const supportReply =
         'Your message has been forwarded to our support team. They will get back to you soon.';
       const newSupportMessage = { role: 'assistant', content: supportReply };
       setMessages((prevMessages) => [...prevMessages, newSupportMessage]);
+      setLoading(false); // Stop loading spinner
     }
   };
 
@@ -304,6 +309,7 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
+          {loading && <img src="/spinner.gif" width="60" height="60" alt="Loading..." />} {/* Rendering spinner when loading */}
         </div>
       </div>
       <div className={styles.inputContainer}>
@@ -323,6 +329,7 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+
 
 
 
