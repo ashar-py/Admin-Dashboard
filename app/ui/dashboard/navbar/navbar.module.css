@@ -1,10 +1,10 @@
 
 .container {
   position: sticky;
-    padding: 10px;
+    padding: 15px;
     margin-top: 0px;
     border-radius: 10px;
-    background-color:  var(--bgSoft);
+    background-color:  var(--bg);
     color: var(--text);
     display: flex;
     align-items: center;

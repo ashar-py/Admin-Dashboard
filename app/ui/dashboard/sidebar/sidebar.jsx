@@ -44,7 +44,7 @@ const menuItems = [
         title: "Agents",
         list: [
             {
-                title: "Basic Prompt",
+                title: "Prompt Builder",
                 path: "/dashboard/coming_soon",
                 icon: <GoBookmark />,
             },
