@@ -143,7 +143,7 @@ const Chatbot = () => {
       </div>
       
       <div className={styles.chatbotContainer} ref={chatContainerRef}>
-      <pre>
+      
         <div className={styles.chatContainer}>
           {messages.map((msg, index) => (
             <ChatMessage
@@ -155,7 +155,7 @@ const Chatbot = () => {
           ))}
           {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}
         </div>
-        </pre>
+        
       </div>
 
       

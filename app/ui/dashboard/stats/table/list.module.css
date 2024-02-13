@@ -8,12 +8,13 @@
   width: 95%;
   border-collapse: collapse;
   margin: 10px;
+  
 }
 
 .mainTable th,
 .mainTable td {
   border-bottom: 0.7px solid #f2f2f2;
-  padding: 12px; /* Increased padding for better readability */
+  padding: 5px; /* Increased padding for better readability */
   text-align: left;
 }
 

@@ -16,7 +16,7 @@
 }
 
 .chatContainer {
-  
+  display:flex;
   
   flex-direction: column;
   flex-grow: 1;
@@ -60,7 +60,7 @@
             margin: 10px; 
             border-radius: 5px; 
             max-width: 70%; 
-            word-wrap: break-word; 
+            
             display: flex; 
             align-items: center; 
             
@@ -82,15 +82,20 @@
             align-self: flex-start;
             border-radius: 5px;
             padding-right: 50px;
-            margin-right: 100px;
+            
+           
            
 }
 
 
+.pre {
+  overflow-wrap: break-word; /* Break long words to fit within container */
+  white-space: pre-wrap; /* Wrap text if it exceeds container width */
+}
 
 .messageContent {
-  max-width: 100%; /* Limit message width for better readability */
-  
+  margin: 0; /* Remove default margin */
+  padding: 8px; /* Add padding for better readability */
 }
 
 

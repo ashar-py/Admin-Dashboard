@@ -1,29 +1,4 @@
-// // src/components/ChatMessage.jsx
-// "use client";
-// import React from 'react';
-// import styles from "@/app/ui/dashboard/conversations/conversations.module.css"
-// import PropTypes from 'prop-types';
 
-// const ChatMessage = ({ message, isBot, className }) => {
-//   const messageClass = isBot ? styles.botMessage : styles.userMessage;
-
-//   return (
-//     <div className={`${styles.chatMessage} ${messageClass} ${className}`}>
-//       <div className={styles.messageContent}>{message}</div>
-//     </div>
-//   );
-// };
-
-// ChatMessage.propTypes = {
-//   message: PropTypes.string.isRequired,
-//   isBot: PropTypes.bool.isRequired,
-//   className: PropTypes.string,
-// };
-
-// export default ChatMessage;
-
-// src/components/ChatMessage.jsx
-// src/components/ChatMessage.jsx
 "use client";
 import React from "react";
 import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
@@ -35,7 +10,9 @@ const ChatMessage = ({ role, content, className }) => {
 
   return (
     <div className={`${styles.chatMessage} ${messageClass} ${className}`}>
+      <pre className={styles.pre}>
       <div className={styles.messageContent}>{content}</div>
+      </pre>
     </div>
   );
 };
@@ -47,3 +24,5 @@ ChatMessage.propTypes = {
 };
 
 export default ChatMessage;
+
+
