@@ -4,7 +4,6 @@
 // import styles from "@/app/ui/dashboard/conversations/conversations.module.css"
 // import PropTypes from 'prop-types';
 
-
 // const ChatMessage = ({ message, isBot, className }) => {
 //   const messageClass = isBot ? styles.botMessage : styles.userMessage;
 
@@ -23,16 +22,16 @@
 
 // export default ChatMessage;
 
-
 // src/components/ChatMessage.jsx
 // src/components/ChatMessage.jsx
 "use client";
-import React from 'react';
-import styles from "@/app/ui/dashboard/conversations/conversations.module.css"
-import PropTypes from 'prop-types';
+import React from "react";
+import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
+import PropTypes from "prop-types";
 
 const ChatMessage = ({ role, content, className }) => {
-  const messageClass = role === 'assistant' ? styles.botMessage : styles.userMessage;
+  const messageClass =
+    role === "assistant" ? styles.botMessage : styles.userMessage;
 
   return (
     <div className={`${styles.chatMessage} ${messageClass} ${className}`}>
@@ -48,5 +47,3 @@ ChatMessage.propTypes = {
 };
 
 export default ChatMessage;
-
-

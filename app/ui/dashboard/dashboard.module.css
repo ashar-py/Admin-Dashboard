@@ -3,11 +3,18 @@
 }
 
 .menu{
-    flex: 1;
+    
     background-color: var(--bg);
     color: white;
-    padding: 20px;
-    min-height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 97vh;
+    max-width: 290px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .content{
