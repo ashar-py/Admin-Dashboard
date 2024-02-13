@@ -10,7 +10,7 @@
   padding: 20px;
   margin: auto;
   margin-top: 40px;
-  background-color: var(--bgSoft);
+  background-color: var(--bg);
   color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -22,8 +22,7 @@
 }
 
 .tile:hover {
-  background-color: #f4e2ff;
-  color: black;
+  background-color: var(--bgSoft);
   cursor: pointer;
   transform: scale(1.05);
   transition: 0.7s;

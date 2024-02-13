@@ -6,7 +6,7 @@
   width: 100%;
   height: 60vh;
   margin-top: 5px;
-  background-color: #e8d2ff;
+  background-color: var(--light);
   border-radius: 8px;
   padding: 50px;
   padding-top: 50px;
@@ -33,7 +33,7 @@
   gap: 50px;
   width:100%;
   padding: 10px 30px 10px 30px;
-  background-color: rgb(242, 236, 242);
+  background-color: #f2ecf2;
   border-radius: 10px;
   margin-top: 5px;
 
@@ -69,7 +69,7 @@
 
 /* User Message Style (Sender) */
 .userMessage {
-  background-color: #e1c8e1; 
+  background-color: #f2ecf2; 
             color: #000; 
             align-self: flex-end; 
            
@@ -77,7 +77,7 @@
 
 /* Bot Message Style (Receiver) */
 .botMessage {
-  background-color: #b55df4; 
+  background-color: var(--dark); 
             color: #fff; 
             align-self: flex-start;
             border-radius: 5px; 
@@ -112,7 +112,7 @@
   flex: 1;
   padding: 15px; 
   margin: 10px; 
-            background-color: var(--bg); 
+            background-color: var(--dark); 
             color: #fff; 
             border: none; 
             border-radius: 5px; 
@@ -121,7 +121,7 @@
 
 .historyButton{
   margin-left: auto;
-  background-color: #b55df4;
+  background-color: var(--dark);
   color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -173,7 +173,7 @@ margin-right: 10px;
 
 /* Styling for when the toggle switch is checked (on) */
 input:checked + .slider {
-  background-color: var(--bg);
+  background-color: var(--dark);
 }
 
 input:checked + .slider:before {

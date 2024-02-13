@@ -37,7 +37,7 @@
 .container {
     padding: 20px;
     border-radius: 10px;
-    background-color:  var(--bg);
+    background-color:  var(--bgSoft);
     color: var(--text);
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     align-items: center;
     gap: 2px;
     padding: 10px;
-    background-color: var(--bgSoft);
+    background-color: var(--bg);
     border-radius: 10px;
   }
   

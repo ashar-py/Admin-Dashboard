@@ -272,7 +272,7 @@ const Chatbot = () => {
           <label>Select section</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
             <option value="bimakartbike">Bimakartbike</option>
-            <option value="dmrchr">dmrchr</option>
+            <option value="dmrchr">DMRCHR</option>
           </select>
         </div>
 
@@ -309,7 +309,7 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
-          <div className={styles.botMessage}>{loading && <img src="/Loading.gif" width="60" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}</div>
+          {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}
         </div>
       </div>
       <div className={styles.inputContainer}>

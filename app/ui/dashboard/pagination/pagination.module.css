@@ -10,8 +10,10 @@
     padding: 5px 10px;
     cursor: pointer;
     border: none;
+    color: var(--bg);
   }
   
   .button:disabled{
     cursor: not-allowed;
+    color: grey;
   }

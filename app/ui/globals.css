@@ -1,8 +1,22 @@
 :root{
-  --bg: #b882ff;
-  --bgSoft: #d1a6ff;
+  --bg: #8841cf;
+  --bgSoft: #a467e0;
+  --light: #f1e3ff;
+  --dark: #7e28d4;
   --text: white;
   --textSoft: rgb(231, 231, 231);
+  /* --dark: #343f52;
+  --primary: #605dba;
+  --body: #60697b;
+  --border: #ebedf3;
+  --primary-soft: #f0f0f8;
+  --secondary: #aab0bc;
+  --white: white;
+  --blue: #3f78e0;
+  --dark-orchid: #8841cf;
+  --primary-pale: #e6e5f4;
+  --light: #fcfcfd;
+  --yellow: #fcc032; */
 }
 
 *{

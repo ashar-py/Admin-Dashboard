@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  border: 1px solid var(--bg);
+  border: 1px solid var(--bgSoft);
 }
 
 .form input {
@@ -24,7 +24,7 @@
 .form button {
   width: 100%;
   padding: 30px;
-  background-color: var(--bg);
+  background-color: var(--bgSoft);
   color: var(--text);
   border: none;
   cursor: pointer;
