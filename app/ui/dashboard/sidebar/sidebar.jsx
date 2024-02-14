@@ -75,17 +75,17 @@ const menuItems = [
         list: [
             {
                 title: "Integration",
-                path: "/#",
+                path: "/dashboard/integration",
                 icon: <MdOutlineSettings/>,
             },
             {
                 title: "Notifications",
-                path: "/#",
+                path: "/dashboard/notifications",
                 icon: <MdNotifications />,
             },
             {
                 title: "Help Center",
-                path: "/#",
+                path: "/dashboard/help",
                 icon: <MdHelpCenter />,
             },
         ],

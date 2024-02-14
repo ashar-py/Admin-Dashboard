@@ -1,0 +1,58 @@
+.container{
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.logo{
+    display: flex;
+    gap: 60%;
+}
+
+.logo Image{
+    border-radius: 50%;
+    align-items: flex-start;
+}
+.help{
+    border: 0.1px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    align-items: flex-end;
+    padding: 13px;
+}
+.help:hover{
+    background-color: #ececec;
+    cursor: help;
+}
+
+.content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.detail{
+    font-size: 14px;
+    color: grey;
+}
+
+.connect{
+    padding: 7px;
+    width: 50%;
+    background-color: #00c100;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.connect:hover{
+    cursor: pointer;
+}
