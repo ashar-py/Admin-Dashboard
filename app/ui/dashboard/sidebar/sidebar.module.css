@@ -47,7 +47,7 @@
 }
 
 .logout{
-    padding-top: 0px;
+    /* padding-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 20px;
@@ -60,9 +60,19 @@
     cursor: pointer;
     background: none;
     border: none;
+    color: white; */
+
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    margin-right: 100px;
+    cursor: pointer;
+    background-color: var(--bg);
     color: white;
-   
-    
 }
 
 .logout:hover{
