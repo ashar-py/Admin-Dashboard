@@ -134,7 +134,7 @@ const Chatbot = () => {
             isEnabled={isEnabled}
             toggleSwitch={toggleSwitch}
           />
-          Enable AI response
+          <span className={styles.toggleSwitchText}>Enable AI response</span>
         </div>
 
         <button className={styles.historyButton} onClick={retrieveChat}>
