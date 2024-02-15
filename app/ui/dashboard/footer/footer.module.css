@@ -5,9 +5,10 @@
   text-align: center; /* Center-align text */
   padding: 2px 0px; /* Add padding to the top and bottom */
   position: fixed; /* Fix the footer to the bottom of the viewport */
-  left: 265px;
+  left: 266px;
   bottom: 0;
   overflow:hidden ;
+  font-weight: 500;
 }
 
 /* Responsive styling */
