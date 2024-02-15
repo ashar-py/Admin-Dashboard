@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    height: 100vh; 
+    /* height: 100vh;  */
 }
 
 .menu{
@@ -9,13 +9,14 @@
     color: white;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
-    height: 100vh;    
+    height: auto;    
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
 }
 
 .content{
+    max-width: auto;
     flex:4;
     padding-left: 2px;
 }
