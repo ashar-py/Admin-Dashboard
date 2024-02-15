@@ -1,13 +1,18 @@
-
-
 .footer {
-  position:bottom;
-  margin-top: 50px;
-  width: 100%;
-  background-color: transparent;
-  color: black;
-  text-align: center;
-  margin-bottom: 0px;
-
+  width: 70%;
+  background-color: #f8f9fa; /* Set background color */
+  color: #333; /* Set text color */
+  text-align: center; /* Center-align text */
+  padding: 2px 0px; /* Add padding to the top and bottom */
+  position: fixed; /* Fix the footer to the bottom of the viewport */
+  left: 265px;
+  bottom: 0;
+  overflow:hidden ;
 }
 
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+}
