@@ -153,7 +153,7 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
-          {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} {/* Rendering spinner when loading */}
+          {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} 
         </div>
         
       </div>
@@ -165,7 +165,7 @@ const Chatbot = () => {
             placeholder="Type your message..."
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
-            onKeyPress={handleKeyPress} // Added event listener
+            onKeyPress={handleKeyPress} 
           />
           <button onClick={sendMessage} disabled={!isPhoneNumberEntered}>
             Send
