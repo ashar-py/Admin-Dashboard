@@ -34,7 +34,7 @@
 }
 
 .userTitle{
-    font-size: 12px;
+    font-size: 14px;
     color: var(--textSoft);
 }
 
@@ -45,8 +45,9 @@
 .cat{
     color: var(--textSoft);
     font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
     margin: 10px 0px;
+    margin-left: 10px;
 }
 
 .logout{
