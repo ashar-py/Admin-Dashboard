@@ -1,19 +1,11 @@
-
 import React from "react";
-
-const PromptBuilder = () => {
-
-
-
-    return ( 
-  <div>
-  prompt builder
-  
-  </div>
-
-    )
-
-
+import GuardRails from "@/components/agents/guardrails";
+const guardRails = () => {
+  return (
+    <div>
+      <GuardRails />
+    </div>
+  );
 };
 
-export default PromptBuilder;
+export default guardRails;

@@ -1,19 +1,13 @@
-
 import React from "react";
 
-const PromptBuilder = () => {
+import PromptBuilder from "@/components/agents/promptbuilder";
 
-
-
-    return ( 
-  <div>
-  prompt builder
-  
-  </div>
-
-    )
-
-
+const promptBuilder = () => {
+  return (
+    <div>
+      <PromptBuilder />
+    </div>
+  );
 };
 
-export default PromptBuilder;
+export default promptBuilder;

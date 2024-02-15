@@ -1,0 +1,70 @@
+.container {
+    max-width: 800px;
+    margin:50px;
+    margin-left: 100px;
+
+  }
+  
+  .inputContainer {
+    margin-bottom: 20px;
+    font-size: medium;
+  }
+  
+  .inputContainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .inputContainer textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid var(--bg);
+    box-sizing: border-box;
+    height: 300px; /* Adjust height as needed */
+    font-size: medium;
+  }
+  
+ 
+  
+  
+  .dropdown{
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    font-size: bold;
+  }
+
+  .dropdown label{
+    font-weight: bold;
+  }
+
+  .dropdown select{
+    background-color: var(--bg);
+    margin: 10px 30px 10px 30px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .button button{
+    background-color: var(--bg);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 30px 50px 150px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
