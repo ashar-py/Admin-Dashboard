@@ -1,0 +1,41 @@
+.container{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+    /* border: 2px solid var(--dark); */
+
+}
+
+.headertext{
+    font-size: large;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea{
+    height: 350px;
+    width: 800px;
+    border: 5px solid var(--dark);
+    margin-left: 200px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.text{
+    margin-left: 20px;
+    font-size: large;
+}
+
+.text li{
+    margin-top: 10px;
+}
+
+.button{
+
+}
