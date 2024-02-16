@@ -1,0 +1,57 @@
+.container{
+    /* max-width: 800px; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    
+    /* border: 2px solid var(--dark); */
+}
+
+.topContainer label{
+    margin-left: -20px;
+    margin-top: 26px;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom:  20px;
+}
+
+.file {
+    border: 2px solid black;
+    padding: 30px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    
+}
+
+
+
+.text{
+    margin-left: -26px;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+.text li{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.btnNext{
+    color: white;
+    background-color: var(--dark);
+    padding: 5px;
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.btnReset{
+    color: rgb(6, 6, 6);
+    background-color: orange;
+    cursor: pointer;
+    padding: 5px;
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 100px;
+}
