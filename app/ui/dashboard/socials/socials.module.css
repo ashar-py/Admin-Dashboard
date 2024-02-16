@@ -56,3 +56,17 @@
 .connect:hover{
     cursor: pointer;
 }
+
+.comingsoon{
+    padding: 7px;
+    width: 50%;
+    background-color: #00c100;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.commingsoon:hover{
+    cursor: pointer;
+}

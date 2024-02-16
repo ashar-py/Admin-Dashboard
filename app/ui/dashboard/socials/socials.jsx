@@ -1,19 +1,19 @@
 import styles from "./socials.module.css";
 import Image from "next/image";
 
-const Socials = () => {
+const Socials = ({name, logo, desc, signin}) => {
     return (
         <div className={styles.container}>
             <div className={styles.logo}>
-                <Image src="/Messenger.png" width="50" height="50"></Image>
+                <Image src={logo} width="50" height="40"></Image>
                 <button className={styles.help}>Help</button>
             </div>
                 <div className={styles.content}>
-                <span className={styles.title}>Messenger{/* Enter name */}</span>
+                <span className={styles.title}>{name}</span>
                 <span className={styles.detail}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolore quisquam.
                 </span>
-                <button className={styles.connect}>Sign In</button>
+                {signin ? <button className={styles.connect}>Sign In to Connect</button>:<button className={styles.comingsoon}>Coming Soon</button>}
             </div>
         </div>
     )

@@ -8,18 +8,18 @@ const Integrations = () => {
             <h4>Messaging Platforms</h4><hr></hr>
             <div className={styles.socials}>
                 {/*Use map here*/}
-                <Socials></Socials>
-                <Socials></Socials>
-                <Socials></Socials>
-                <Socials></Socials>
+                <Socials name="Messenger" logo="/Messenger.png" desc="" signin="true"></Socials>
+                <Socials name="WhatsApp" logo="/whatsapp.png" desc="" signin={false}></Socials>
+                <Socials name="Instagram" logo="/instagram.png" desc="" signin={false}></Socials>
+                <Socials name="G-Mail" logo="/Gmail.png" desc="" signin={false}></Socials>
             </div>
             <h4>CRM Platforms</h4><hr></hr>
             <div className={styles.crm}>
                 {/*Use map here*/}
-                <CRM></CRM>
-                <CRM></CRM>
-                <CRM></CRM>
-                <CRM></CRM>
+                <CRM name="Salesforce" logo="/Salesforce.png" desc="" signin={false}></CRM>
+                <CRM name="Hubspot" logo="/hubspot.png" desc="" signin="true"></CRM>
+                <CRM name="Zoho" logo="/noavatar.png" desc="" signin="true"></CRM>
+                <CRM name="Zapier" logo="/noavatar.png" desc="" signin={false}></CRM>
                 
             </div>
         </div>
