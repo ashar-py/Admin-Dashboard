@@ -5,7 +5,7 @@ const GuardRails = () => {
   return (
     <div className={styles.container}>
       <div className={styles.inputContainer}>
-        <label className={styles.headertext} htmlFor="description">Add any guidlines and rules that need to be followed</label>
+        <label htmlFor="description">Add any guidlines and rules that need to be followed</label>
         <textarea className={styles.textarea} id="description" name="description" />
       </div>
       <div className={styles.text}>
@@ -34,8 +34,8 @@ const GuardRails = () => {
         
       </div>
       <div className={styles.button}>
-        <button>Next</button>
-        <button>Reset</button>
+        <button className={styles.btnNext} >Next</button>
+        <button className={styles.btnReset} >Reset</button>
       </div>
     </div>
   );
