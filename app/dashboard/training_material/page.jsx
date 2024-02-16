@@ -1,19 +1,13 @@
-
 import React from "react";
+import TrainingMaterial from "@/components/agents/TrainingMaterial";
+import styles from "@/app/ui/dashboard/trainingmaterial/training.module.css";
 
-const PromptBuilder = () => {
-
-
-
-    return ( 
-  <div>
-  prompt builder
-  
-  </div>
-
-    )
-
-
+const Training = () => {
+  return (
+    <div>
+      <TrainingMaterial />
+    </div>
+  );
 };
 
-export default PromptBuilder;
+export default Training;

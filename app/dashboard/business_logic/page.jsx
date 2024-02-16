@@ -1,19 +1,12 @@
-
 import React from "react";
+import BusinessLogic from "@/components/agents/businesslogic";
 
-const PromptBuilder = () => {
-
-
-
-    return ( 
-  <div>
-  prompt builder
-  
-  </div>
-
-    )
-
-
+const businessLogic = () => {
+  return (
+    <div>
+      <BusinessLogic />
+    </div>
+  );
 };
 
-export default PromptBuilder;
+export default businessLogic;

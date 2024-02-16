@@ -2,7 +2,19 @@ import React from 'react'
 
 function businesslogic() {
   return (
-    <div>businesslogic</div>
+    <div>
+      
+      
+      
+      businesslogic
+
+
+
+
+
+
+
+    </div>
   )
 }
 
