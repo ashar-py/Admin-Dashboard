@@ -49,12 +49,14 @@
     padding: 5px;
     width: 80px;
     border-radius: 10px;
+    cursor: pointer;
     margin-right: 100px;
 }
 
 .btnReset{
     color: rgb(6, 6, 6);
     background-color: orange;
+    cursor: pointer;
     padding: 5px;
     width: 80px;
     border-radius: 10px;
