@@ -1,39 +1,49 @@
 .container{
-    /* max-width: 800px; */
     display: flex;
     flex-direction: column;
-    margin-left: 150px;
     
-    /* border: 2px solid var(--dark); */
+    margin-left: 1px;
+    border: 2px solid var(--dark);
+  height: 96vh;
+  width: 80vw ;
+  justify-content: center;
+  align-items: center;
 }
 
 .topContainer label{
-    margin-left: -20px;
-    margin-top: 26px;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-right: 700px;
+    
     font-size: medium;
     font-weight: bold;
     margin-bottom:  20px;
+    border: 2px solid var(--dark);
 }
 
 .file {
     border: 2px solid black;
-    padding: 30px;
-    margin-top: 26px;
-    margin-bottom: 10px;
+    padding: 60px;
+    
+    padding-left: 35%;
+    margin: 30px 50px 30px 50px;
+    
     
 }
 
 
 
 .text{
-    margin-left: -26px;
+    margin-left: 26px;
     font-size: medium;
     margin-bottom: 20px;
+    border: 2px solid var(--dark);
 }
 
 .text li{
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 10px;
+    border: 2px solid var(--dark);
 }
 
 .btnNext{
@@ -43,7 +53,8 @@
     width: 80px;
     border-radius: 10px;
     cursor: pointer;
-    margin-right: 100px;
+    margin: 30px 50px 30px 50px;
+   
 }
 
 .btnReset{
@@ -53,5 +64,6 @@
     padding: 5px;
     width: 80px;
     border-radius: 10px;
-    margin-right: 100px;
+    margin: 30px 50px 30px 50px;
+    
 }
