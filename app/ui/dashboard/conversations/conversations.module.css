@@ -22,8 +22,7 @@
   flex-grow: 1;
   overflow-y:auto;
   scroll-behavior: smooth; 
-  font-size: 15px;
-  font-style: normal;
+  
   
 }
 
@@ -69,9 +68,7 @@
             align-items: center; 
             border-radius: 10px; 
             
-            font-size: 18px;
-            font-family:'Times New Roman', Times, serif ;
-            font-style: normal;
+            
             
             
 }
@@ -98,13 +95,16 @@
 
 
 .pre {
-  overflow-wrap: break-word; /* Break long words to fit within container */
-  white-space: pre-wrap; /* Wrap text if it exceeds container width */
+  overflow-wrap: break-word; 
+  white-space: pre-wrap; 
+  font-size: 19px;
+  font-weight: 400;
+  font-family:Arial, Helvetica, sans-serif ;
 }
 
 .messageContent {
-  margin: 0; /* Remove default margin */
-  padding: 8px; /* Add padding for better readability */
+  margin: 0; 
+  padding: 8px; 
 }
 
 
