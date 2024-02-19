@@ -1,6 +1,6 @@
 import React from "react";
 
-import BusinessLogic from "@/components/agents/BusinessLogic";
+import BusinessLogic from "@/components/agents/businesslogic";
 
 const DefineLogic = () => {
   return (
