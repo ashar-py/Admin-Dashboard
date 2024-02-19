@@ -3,7 +3,8 @@
     
     /* margin-bottom: 55px; */
     /* padding-bottom: -20px; */
-    max-height: auto;
+    /* max-height: auto; */
+    height: 100vh;
     max-width:fit-content;
     justify-content: center;
     align-items: center;

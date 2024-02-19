@@ -2,6 +2,7 @@
 // TrainingMaterial.js
 import React, { useState } from 'react';
 import styles from "@/app/ui/dashboard/trainingmaterial/training.module.css";
+import { FaUpload } from "react-icons/fa";
 
 function TrainingMaterial() {
   const [activeTab, setActiveTab] = useState('fileUpload');
@@ -25,6 +26,7 @@ function TrainingMaterial() {
   return (
     <div className={styles.trainingMaterialContainer}>
       <div className={styles.topContainer}>
+      <h4>Upload</h4>
         <div className={styles.tabContainer}>
           <div
             className={`${styles.tab} ${activeTab === 'fileUpload' ? styles.activeTab : ''}`}
@@ -52,7 +54,14 @@ function TrainingMaterial() {
           </div>
         </div>
         {activeTab === 'fileUpload' && (
-          <input type="file" />
+          <div className={styles.upload} for="inputTag">
+            <label for="inputTag">
+            <FaUpload />
+            <input id="inputTag" className={styles.inputTag} type="file" />
+            <div>Click to upload file</div>
+            <p>Drop your PDF, CSV, DOCX, or TXT file here (40MB limit)</p>
+            </label>
+          </div>
         )}
         {activeTab === 'websiteURL' && (
           <input type="text" placeholder="Enter website URL" />
@@ -61,10 +70,14 @@ function TrainingMaterial() {
           <input type="text" placeholder="Enter sitemap URL" />
         )}
         {activeTab === 'text' && (
-          <textarea placeholder="Enter text"></textarea>
+          <div className={styles.textBox}>
+            <input placeholder='Title for your text'></input>
+            <textarea placeholder="Main body text"></textarea>
+          </div>
         )}
       </div>
       <div className={styles.tableContainer}>
+      <h4>Train</h4>
        
         <table className={styles.table}>
           <thead>
