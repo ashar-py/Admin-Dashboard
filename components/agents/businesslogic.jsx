@@ -1,6 +1,6 @@
 import React from 'react'
 
-function businesslogic() {
+function BusinessLogic() {
   return (
     <div>
       
@@ -18,4 +18,4 @@ function businesslogic() {
   )
 }
 
-export default businesslogic
+export default BusinessLogic

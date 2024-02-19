@@ -1,12 +1,13 @@
 import React from "react";
-import BusinessLogic from "@/components/agents/businesslogic";
 
-const businessLogic = () => {
+import BusinessLogic from "@/components/agents/BusinessLogic";
+
+const DefineLogic = () => {
   return (
     <div>
-      <BusinessLogic />
+      <BusinessLogic/>
     </div>
   );
 };
 
-export default businessLogic;
+export default DefineLogic;
