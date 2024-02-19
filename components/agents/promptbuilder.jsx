@@ -16,9 +16,9 @@ const promptBuilder = () => {
           <option value="llmType3">LLM Type 3</option>
         </select>
       </div>
-      <div className={styles.button} >
-        <button >Next</button>
-        <button >Reset</button>
+      <div  >
+        <button className={styles.buttonNext} >Next</button>
+        <button className={styles.buttonReset}>Reset</button>
       </div>
     </div>
   );

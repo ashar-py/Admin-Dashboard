@@ -2,6 +2,8 @@
     max-width: 800px;
     margin:50px;
     margin-left: 100px;
+    align-items: center;
+    justify-content: center;
 
   }
   
@@ -48,9 +50,21 @@
     color: white;
   }
 
-  .button button{
+  .buttonNext{
     background-color: var(--bg);
     color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 30px 50px 150px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+  }
+
+  .buttonReset{
+    background-color: orange;
+    color: black;
     justify-content: center;
     align-items: center;
     margin: 50px 30px 50px 150px;
