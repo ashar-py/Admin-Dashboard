@@ -1,4 +1,4 @@
-import styles from '@/app/ui/dashboard/customers/addCustomer/addCustomer.module.css'
+import styles from "@/app/ui/dashboard/customers/addCustomer/addCustomer.module.css";
 
 const AddCutomer = () => {
     return (

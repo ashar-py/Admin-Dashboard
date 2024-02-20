@@ -1,7 +1,7 @@
 "use client";
-import styles from "@/app/ui/dashboard/customers/customers.module.css"
+import styles from "@/app/ui/dashboard/customers/customers.module.css";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
-import Search from "@/app/ui/dashboard/search/search"
+import Search from "@/app/ui/dashboard/search/search";
 import Link from 'next/link'
 
 const CustomerPage = () => {
