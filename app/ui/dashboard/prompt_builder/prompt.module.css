@@ -1,7 +1,7 @@
 .container {
     max-width: 800px;
-    margin: 50px;
-    margin: auto;
+    
+  margin-left: 100px;
     align-items: center;
     justify-content: center;
   }
@@ -20,21 +20,21 @@
   }
   
   .inputContainer textarea {
-    margin-top: 20px;
-    width: 100%;
+   
+    width: 800px;
     padding: 8px;
     border-radius: 20px;
-    border: 2px solid var(--bg);
+    border: 5px solid var(--dark);
     box-sizing: border-box;
     height: 300px; /* Adjust height as needed */
-    font-size: medium;
+    font-size: 20px;
   }
     
   .dropdown{
     align-items: center;
     justify-content: center;
-    margin-left: 100px;
-    font-size: bold;
+    margin-left: 200px;
+    font-weight: bold;
   }
 
   .dropdown label{
@@ -54,7 +54,7 @@
     color: white;
     justify-content: center;
     align-items: center;
-    margin: 50px 30px 50px 150px;
+    margin: 50px 30px 100px 300px;
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
     font-size: medium;
@@ -66,7 +66,7 @@
     color: black;
     justify-content: center;
     align-items: center;
-    margin: 50px 30px 50px 150px;
+    
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
     font-size: medium;

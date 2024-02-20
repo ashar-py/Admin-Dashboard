@@ -1,64 +1,71 @@
-.container{
-    /* max-width: 800px; */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding to prevent elements from sticking to the edge */
     display: flex;
     flex-direction: column;
-    margin-left: 150px;
-    
-    /* border: 2px solid var(--dark); */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Set height to 100% to cover the entire viewport */
 }
 
-.inputContainer label{
-    /* margin-left: -150px; */
-    margin-top: 26px;
+.inputContainer label {
     font-size: medium;
     font-weight: bold;
-    margin-bottom:  20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
 }
 
-.inputContainer{
+.inputContainer {
     margin-top: 26px;
-    margin-left: -24px;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the input container */
 }
 
-.inputContainer textarea{
-    margin-left: 50px;
+.inputContainer textarea {
     height: 250px;
     width: 800px;
+    font-size: 20px;
+   
     border: 5px solid var(--dark);
     margin-top: 26px;
     margin-bottom: 26px;
     border-radius: 10px;
+    box-sizing: border-box; /* Include padding and border in the width */
 }
 
-.text{
-    margin-left: -26px;
+.text {
     font-size: medium;
     margin-bottom: 20px;
+    font-weight: bold;
+   
+    width: fit-content;
 }
 
-.text li{
+.text li {
     margin-left: 50px;
     margin-top: 10px;
+    width: 900px;
 }
 
-.btnNext{
+.btnNext, .btnReset {
     color: white;
-    background-color: var(--dark);
-    padding: 5px;
-    width: 80px;
+    padding: 10px 20px; /* Increase padding for better clickability */
     border-radius: 10px;
+    
     cursor: pointer;
+    margin-top: 20px; /* Add margin to separate buttons */
+    justify-content: space-between;
     margin-right: 100px;
+     
 }
 
-.btnReset{
-    color: rgb(6, 6, 6);
+.btnNext {
+    background-color: var(--dark);
+    
+}
+
+.btnReset {
     background-color: orange;
-    cursor: pointer;
-    padding: 5px;
-    width: 80px;
-    border-radius: 10px;
-    margin-right: 100px;
 }

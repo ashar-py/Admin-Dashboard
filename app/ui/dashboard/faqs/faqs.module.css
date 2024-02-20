@@ -1,69 +1,68 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    
-    margin-left: 100px;
-    /* border: 2px solid var(--dark); */
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 50px;
+ 
   height: 96vh;
-  width: 80vw ;
+
   justify-content: center;
   align-items: center;
 }
 
-.topContainer label{
-    margin-left: 0px;
-    margin-top: 10px;
-    margin-right: 700px;
-    
-    font-size: medium;
-    font-weight: bold;
-    margin-bottom:  20px;
-    /* border: 2px solid var(--dark); */
+.topContainer{
+    width: 800px;
+}
+
+.topContainer label {
+  margin-left: 0px;
+  margin-top: 10px;
+
+
+  font-size: medium;
+  font-weight: bold;
 }
 
 .file {
-    border: 2px solid black;
-    padding: 60px;
-    
-    padding-left: 35%;
-    margin: 30px 50px 30px 50px;
-    
-    
+  border: 2px solid black;
+  padding: 60px;
+
+  padding-left: 35%;
+  margin: 30px 50px 30px 50px;
 }
 
-
-
-.text{
-    margin-left: -150px;
-    font-size: medium;
-    margin-bottom: 20px;
-    /* border: 2px solid var(--dark); */
+.text {
+  margin-left: -150px;
+  font-size: medium;
+  margin-bottom: 20px;
+  /* border: 2px solid var(--dark); */
+  font-weight: bold;
 }
 
-.text li{
-    margin-left: 60px;
-    margin-top: 10px;
-    /* border: 2px solid var(--dark); */
+.text li {
+  margin-left: 60px;
+  margin-top: 10px;
+  /* border: 2px solid var(--dark); */
 }
 
-.btnNext{
-    color: white;
-    background-color: var(--dark);
-    padding: 5px;
-    width: 80px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 30px 50px 30px 50px;
-   
+.btnNext {
+  color: white;
+  background-color: var(--dark);
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 80px 50px 0px 0px;
 }
 
-.btnReset{
-    color: rgb(6, 6, 6);
-    background-color: orange;
-    cursor: pointer;
-    padding: 5px;
-    width: 80px;
-    border-radius: 10px;
-    margin: 30px 50px 30px 50px;
-    
+.btnReset {
+  color: rgb(6, 6, 6);
+  background-color: orange;
+  cursor: pointer;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  
 }
