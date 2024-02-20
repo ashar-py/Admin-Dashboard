@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     
-    margin-left: 1px;
-    border: 2px solid var(--dark);
+    margin-left: 100px;
+    /* border: 2px solid var(--dark); */
   height: 96vh;
   width: 80vw ;
   justify-content: center;
@@ -18,7 +18,7 @@
     font-size: medium;
     font-weight: bold;
     margin-bottom:  20px;
-    border: 2px solid var(--dark);
+    /* border: 2px solid var(--dark); */
 }
 
 .file {
@@ -34,16 +34,16 @@
 
 
 .text{
-    margin-left: 26px;
+    margin-left: -150px;
     font-size: medium;
     margin-bottom: 20px;
-    border: 2px solid var(--dark);
+    /* border: 2px solid var(--dark); */
 }
 
 .text li{
-    margin-left: 20px;
+    margin-left: 60px;
     margin-top: 10px;
-    border: 2px solid var(--dark);
+    /* border: 2px solid var(--dark); */
 }
 
 .btnNext{
