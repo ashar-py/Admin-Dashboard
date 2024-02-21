@@ -5,10 +5,9 @@ import { FaUpload } from "react-icons/fa";
 const FAQS = () => {
   return (
     <div className={styles.container}>
+       <label>Upload any FAQS based on previous interactions</label>
       <div className={styles.topContainer}>
-        <div>
-          <label>Upload any FAQS based on previous interactions</label>
-        </div>
+       
 
         <div className={styles.upload} for="inputTag">
           <label for="inputTag">
