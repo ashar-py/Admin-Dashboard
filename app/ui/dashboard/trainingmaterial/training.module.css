@@ -59,7 +59,7 @@
 }
 
 .tabContainer {
-    background-color: #dbdbdb;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: row;
     width: auto;
@@ -72,7 +72,7 @@
 
 .tab {
     cursor: pointer;
-    padding: 10px 100px;
+    padding: 10px 125px;
     border: 2px solid transparent;
     border-radius: 5px;
     margin: 0px;
@@ -81,8 +81,7 @@
 
 .activeTab {
     color: green;
-    border: 5px solid green;
-    border-radius: 10px;
+    border-bottom: 1px solid green;
 
 }
 
