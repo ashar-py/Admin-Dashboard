@@ -1,9 +1,14 @@
 .container{
-    position: sticky;
-    height: 350px;
+    /* position: sticky; */
+    height: 380px;
     background-color:white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    /* position: sticky; */
 }
 
 .title{
