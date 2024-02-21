@@ -1,58 +1,82 @@
 "use client"
 import styles from "./chart.module.css"
 import React, { PureComponent } from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const data = [
     {
-      name: 'Page A',
-      uv: 4000,
+      name: 'Jan',
+      count: 1000,
       pv: 2400,
       amt: 2400,
     },
     {
-      name: 'Page B',
-      uv: 3000,
+      name: 'Feb',
+      count: 2000,
       pv: 1398,
       amt: 2210,
     },
     {
-      name: 'Page C',
-      uv: 2000,
+      name: 'Mar',
+      count: 3000,
       pv: 9800,
       amt: 2290,
     },
     {
-      name: 'Page D',
-      uv: 2780,
+      name: 'Apr',
+      count: 3500,
       pv: 3908,
       amt: 2000,
     },
     {
-      name: 'Page E',
-      uv: 1890,
+      name: 'May',
+      count: 4000,
       pv: 4800,
       amt: 2181,
     },
     {
-      name: 'Page F',
-      uv: 2390,
+      name: 'Jun',
+      count: 4300,
       pv: 3800,
       amt: 2500,
     },
     {
-      name: 'Page G',
-      uv: 3490,
+      name: 'July',
+      count: 5000,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: 'Aug',
+      count: 5500,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: 'Sept',
+      count: 5700,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: 'Oct',
+      count: 6000,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: 'Nov',
+      count: 5800,
       pv: 4300,
       amt: 2100,
     },
   ];
 
-const Chart = () => {
+const AreaGraph = () => {
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>Total Customers this month</h2>
-            <ResponsiveContainer width="100%" height="90%">
+            <ResponsiveContainer width="100%" height="80%">
         <AreaChart
           width={500}
           height={400}
@@ -68,7 +92,7 @@ const Chart = () => {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Area type="monotone" dataKey="uv" stroke="#5FC79F" fill="#4FC79F" />
+          <Area type="monotone" dataKey="count" stroke="#52aeff" fill="#0088FE" />
         </AreaChart>
       </ResponsiveContainer>
 
@@ -76,4 +100,4 @@ const Chart = () => {
     )
 }
 
-export default Chart
+export default AreaGraph

@@ -4,15 +4,36 @@
     background-color:white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    margin-left: 20px;
     margin-right: 20px;
-    border-radius: 10px;
-    padding-bottom: 10px;
     /* position: sticky; */
 }
 
 .title{
     font-weight: 300;
-    margin-bottom: 20px;
     justify-content: center;
+}
+
+.graphs{
+    margin-top: 10px;
+    padding: 20px;
+    gap: 5px;
+    cursor: pointer;
+    background-color:white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    height: 150px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+}
+.value{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.detail{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 5px;
 }

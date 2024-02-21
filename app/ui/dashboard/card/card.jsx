@@ -1,16 +1,24 @@
 import styles from "./card.module.css";
 import { FcPositiveDynamic } from "react-icons/fc";
+import { FcNegativeDynamic } from "react-icons/fc";
 
-const Card = () => {
+const Card = ({
+    title,
+    value,
+    prev,
+    profit,
+    percent
+}
+) => {
     return (
         <div className={styles.container}>
             <div className={styles.texts}>
-                <span className={styles.title}>Total Customers this month</span>
+                <span className={styles.title}>{title}</span>
                 <span className={styles.number}>
-                    2,648<FcPositiveDynamic />
+                    {value}{profit?<FcPositiveDynamic/>:<FcNegativeDynamic/>}
                 </span>
                 <span className={styles.detail}>
-                    vs Prev 1,968<span className={styles.positive}>(+25%)</span>
+                    vs Prev {prev}<span className={profit?styles.positive:styles.negative}>({percent}%)</span>
                 </span>
             </div>
         </div>

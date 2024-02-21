@@ -54,6 +54,7 @@ function TrainingMaterial() {
           </div>
         </div>
         {activeTab === 'fileUpload' && (
+          <div className={styles.topBox}>
           <div className={styles.upload} for="inputTag">
             <label for="inputTag">
             <FaUpload />
@@ -62,17 +63,24 @@ function TrainingMaterial() {
             <p>Drop your PDF, CSV, DOCX, or TXT file here (40MB limit)</p>
             </label>
           </div>
+          </div>
         )}
         {activeTab === 'websiteURL' && (
+          <div className={styles.topBox}>
           <input type="text" placeholder="Enter website URL" />
+          </div>
         )}
         {activeTab === 'sitemap' && (
+          <div className={styles.topBox}>
           <input type="text" placeholder="Enter sitemap URL" />
+          </div>
         )}
         {activeTab === 'text' && (
+          <div className={styles.topBox}>
           <div className={styles.textBox}>
             <input placeholder='Title for your text'></input>
             <textarea placeholder="Main body text"></textarea>
+          </div>
           </div>
         )}
       </div>

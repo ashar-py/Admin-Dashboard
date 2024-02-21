@@ -1,15 +1,12 @@
 .container{
     display: flex;
-    /* height: 100vh;  */
+    height: 100vh; 
 }
 
 .menu{
     
     background-color: var(--bg);
-    color: white;
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
-      
+    color: white;      
     align-items: center;
     justify-content: center;
     position: relative;
@@ -19,7 +16,7 @@
 .content{
     max-width: auto;
     flex:4;
-    padding-left: 2px;
+    margin-left: 10px;
 }
 
 .wrapper{

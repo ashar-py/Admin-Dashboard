@@ -2,6 +2,7 @@
 import styles from "./rightbar.module.css";
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, Legend, ResponsiveContainer } from 'recharts';
+import LineGraph from "./linegraph";
 
 const data = [
     { name: 'Home', value: 100 },
@@ -50,6 +51,9 @@ const Rightbar = () => {
           <Legend verticalAlign="top"/>
         </PieChart>
       </ResponsiveContainer>
+      <LineGraph title="Avg. time per customer(in mins)" value="6" prev="7.5"/>
+      <LineGraph title="Avg. customer rating(CSAT)" value="4.4" prev="4.2"/>
+
         </div>
     )
 }
