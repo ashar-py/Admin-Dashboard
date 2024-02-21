@@ -26,7 +26,7 @@ function TrainingMaterial() {
   return (
     <div className={styles.trainingMaterialContainer}>
       <div className={styles.topContainer}>
-      <h4>Upload</h4>
+      
         <div className={styles.tabContainer}>
           <div
             className={`${styles.tab} ${activeTab === 'fileUpload' ? styles.activeTab : ''}`}

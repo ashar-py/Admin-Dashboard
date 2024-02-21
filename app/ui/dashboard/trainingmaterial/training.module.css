@@ -1,9 +1,10 @@
 .trainingMaterialContainer {
     display: flex;
     flex-direction: column;
-   
-    height: 90vh;
-    margin: 3px;
+     height: 90vh;
+    margin: 30px;
+    align-items: center;
+    justify-content:center;
 }
 
 .topContainer {
@@ -27,7 +28,7 @@
 
 .upload{
     padding: 30px;
-    background-color: #f2f2f2;
+    background-color: #a2f3ad;
     width: 100%;
     align-items: center;
     font-size: 16px;
@@ -41,7 +42,7 @@
 .upload p{
     font-size: 12px;
     margin-top: 5px;;
-    color: #888888;
+    color: #383333;
 }
 
 .textBox input, .textBox textarea{
@@ -58,9 +59,10 @@
 }
 
 .tabContainer {
+    background-color: #dbdbdb;
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: auto;
     margin: 10px;
     margin-left: 4px;
     padding-top: 10px;
@@ -79,10 +81,13 @@
 
 .activeTab {
     color: green;
-    border-bottom: 2px solid green;
+    border: 5px solid green;
+    border-radius: 10px;
+
 }
 
 .tableContainer {
+    margin-top: 10px;
     padding: 20px;
     width: 93%;
     height:fit-content;
