@@ -101,6 +101,7 @@
   
   .add,
   .remove {
+    background-color: transparent;
     padding: 5px;
     border: none;
     border-radius: 50%;
