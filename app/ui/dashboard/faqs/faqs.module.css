@@ -23,13 +23,29 @@
   font-weight: bold;
 }
 
-.file {
-  border: 2px solid black;
-  padding: 60px;
-
-  padding-left: 35%;
-  margin: 30px 50px 30px 50px;
+.inputTag{
+  display: none;
 }
+
+.upload{
+  padding: 30px;
+  background-color: #a2f3ad;
+  width: 100%;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+.upload label{
+  cursor: pointer;
+}
+
+.upload p{
+  font-size: 12px;
+  margin-top: 5px;;
+  color: #383333;
+}
+
 
 .text {
   margin-left: -150px;

@@ -77,7 +77,7 @@ function TrainingMaterial() {
         )}
       </div>
       <div className={styles.tableContainer}>
-      <h4>Train</h4>
+      <button>Train</button>
        
         <table className={styles.table}>
           <thead>

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/app/ui/dashboard/faqs/faqs.module.css";
+import { FaUpload } from "react-icons/fa";
 
 const FAQS = () => {
   return (
@@ -9,9 +10,15 @@ const FAQS = () => {
           <label>Upload any FAQS based on previous interactions</label>
         </div>
 
-        <div className={styles.file}>
-          <input type="file" />
+        <div className={styles.upload} for="inputTag">
+          <label for="inputTag">
+            <FaUpload />
+            <input id="inputTag" className={styles.inputTag} type="file" />
+            <div>Click to upload file</div>
+            <p>Drop your PDF, CSV, DOCX, or TXT file here (40MB limit)</p>
+          </label>
         </div>
+        
       </div>
 
       <div className={styles.text}>
