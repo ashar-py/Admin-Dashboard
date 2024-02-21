@@ -28,7 +28,7 @@ function BusinessLogic() {
           Add desired outcomes and goals the chatbot needs to achieve with the
           customers.
         </span>
-        <div>
+        <div className={styles.bottomContainerBtn}>
           <input type="text"></input>
           <button className={styles.add}>
             <FaPlus></FaPlus>
