@@ -7,10 +7,17 @@
     flex-direction: column;
     /* border: 2px solid black; */
   }
+
+  .container label{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-right: 450px;
+  }
   
   .topContainer {
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,20 +27,30 @@
 
   }
   
-  .topContainer label {
-    margin-top: 20px;
-    font-weight: bold;
+  .inputTag{
+    display: none;
   }
   
-  .topContainer input {
-    width: 800px;
-    padding-left: 260px;
-    padding-top: 10px;
-    height: 80px;
-    margin-top: 50px;
-    /* padding: 8px; */
-    /* border: 2px solid #000; */
+  .upload{
+    padding: 30px;
+    background-color: #a2f3ad;
+    width: 100%;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
   }
+  
+  .upload label{
+    cursor: pointer;
+  }
+  
+  .upload p{
+    font-size: 12px;
+    margin-top: 5px;;
+    color: #383333;
+  }
+  
+  
   
   .bottomContainer {
     display: flex;

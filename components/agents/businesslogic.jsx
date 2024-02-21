@@ -2,20 +2,26 @@ import React from "react";
 import styles from "@/app/ui/dashboard/BuisnessLogic/logic.module.css";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
-
+import { FaUpload } from "react-icons/fa";
 function BusinessLogic() {
   return (
     <div className={styles.container}>
-      <div className={styles.topContainer}>
-        <div>
+     
           <label>
             Upload customer data if the chat need to be initiated by the
             business
           </label>
-        </div>
+       
+      <div className={styles.topContainer}>
+        
 
-        <div className={styles.file}>
-          <input type="file" />
+      <div className={styles.upload} for="inputTag">
+          <label for="inputTag">
+            <FaUpload />
+            <input id="inputTag" className={styles.inputTag} type="file" />
+            <div>Click to upload file</div>
+            <p>Drop your PDF, CSV, DOCX, or TXT file here (40MB limit)</p>
+          </label>
         </div>
       </div>
 
