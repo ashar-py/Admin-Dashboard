@@ -5,7 +5,7 @@ import UserInfo from "@/components/stats/userinfo";
 import styles from "@/app/ui/dashboard/stats/table/list.module.css";
 
 
-const ActiveUsers = () => {
+const DocsPending = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [error, setError] = useState(null);
   const [selectedPhoneNo, setSelectedPhoneNo] = useState(null); 
@@ -28,7 +28,7 @@ const ActiveUsers = () => {
 
   return (
     <div className={styles.container}>
-      <h4 className={styles.title}>Active Users</h4>
+      <h4 className={styles.title}>Documents Pending Users</h4>
       {error ? (
         <p>Error: {error}</p>
       ) : (
@@ -89,4 +89,4 @@ const ActiveUsers = () => {
   );
 };
 
-export default ActiveUsers;
+export default DocsPending;
