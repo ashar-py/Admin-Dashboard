@@ -7,7 +7,7 @@
 
 .thirdparty{
   display: flex;
-  margin-top: 14px;
+  margin-top: 10px;
   margin-bottom: 14px;
 
 }
@@ -39,7 +39,7 @@
 
 .tile {
   width: 170px; /* Set a fixed width for square tiles */
-  height: 170px; /* Set a fixed height for square tiles */
+  height: 150px; /* Set a fixed height for square tiles */
   padding: 20px;
   margin-right: auto;
   margin-bottom: 14px;
