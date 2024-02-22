@@ -21,6 +21,7 @@
 .mainTable th {
   background-color: var(--bg);
   color: var(--text);
+  width: auto;
 }
 
 .popupOverlay {

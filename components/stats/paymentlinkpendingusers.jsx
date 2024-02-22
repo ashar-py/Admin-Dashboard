@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { fetchActiveUsers } from "@/app/api/activeusers";
 import UserInfo from "@/components/stats/userinfo";
 import styles from "@/app/ui/dashboard/stats/table/list.module.css";
+import Link from "next/link";
 
-
-const ActiveUsers = () => {
+const PaymentLink = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [error, setError] = useState(null);
   const [selectedPhoneNo, setSelectedPhoneNo] = useState(null); 
@@ -28,7 +28,7 @@ const ActiveUsers = () => {
 
   return (
     <div className={styles.container}>
-      <h4 className={styles.title}>Active Users</h4>
+      <h4 className={styles.title}>Payment Link Pending Users</h4>
       {error ? (
         <p>Error: {error}</p>
       ) : (
@@ -64,6 +64,14 @@ const ActiveUsers = () => {
                             View
                           </button>
                         </td>
+                        <td>
+                          <Link href="./payment_link_pending/send_link">
+                          <button className={`${styles.button} ${styles.view}`}>
+                            Send Link
+                          </button>
+                          </Link>
+                        </td>
+                       
                       </tr>
                     );
                   } else {
@@ -89,4 +97,4 @@ const ActiveUsers = () => {
   );
 };
 
-export default ActiveUsers;
+export default PaymentLink;
