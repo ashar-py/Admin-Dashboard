@@ -47,7 +47,7 @@
 
 
 .text {
-  margin-top: 78px;
+  margin-top: 68px;
   margin-left: -470px;
   font-size: medium;
   margin-bottom: 20px;
@@ -69,7 +69,7 @@
   height: 40px;
   border-radius: 10px;
   cursor: pointer;
-  margin: 80px 150px 50px 0px;
+  margin: 80px 100px 50px 0px;
 }
 
 .btnReset {
