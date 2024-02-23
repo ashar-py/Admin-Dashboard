@@ -11,7 +11,7 @@ const Dashboard = () => {
             <div className={styles.main}>
             <div className={styles.cards}>
                 <Card 
-                title="Total Customers this month"
+                title="Customers this month"
                 value="1,250"
                 prev="1,000"
                 profit={true}
