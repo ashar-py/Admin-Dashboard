@@ -3,7 +3,7 @@ import styles from "./rightbar.module.css";
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, Legend, ResponsiveContainer } from 'recharts';
 import LineGraph from "./linegraph";
-import { Tooltip } from "bootstrap";
+// import { Tooltip } from "bootstrap";
 
 const data = [
     { name: 'Home', value: 100 },
