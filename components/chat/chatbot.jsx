@@ -122,7 +122,7 @@ const Chatbot = () => {
           </select>
         </div>
 
-        <div className={styles.inputContainer}>
+        <div className={styles.inputTopContainer}>
           <input
             type="text"
             placeholder="Enter Number"

@@ -141,26 +141,6 @@ function TrainingMaterial() {
               <td>Sample 1</td>
               <td>Sample 1</td>
             </tr>
-            <tr>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-            </tr>
-            <tr>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-              <td>Sample 1</td>
-            </tr>
             
            
           </tbody>
