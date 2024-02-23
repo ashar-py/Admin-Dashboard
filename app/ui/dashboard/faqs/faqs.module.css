@@ -1,24 +1,20 @@
 .container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-
-  margin-left: 50px;
- 
+  margin-left: 280px;
   height: 96vh;
-
   justify-content: center;
   align-items: center;
 }
 
 .topContainer{
-    width: 800px;
+    width: 100%;
 }
 
 .topContainer label {
-  margin-left: 0px;
+  margin-left: -140px;
   margin-top: 10px;
-
-
   font-size: medium;
   font-weight: bold;
 }
@@ -28,9 +24,10 @@
 }
 
 .upload{
-  margin: 10px;
+  margin-top: 14px;
+  margin-left: -140px;
   padding: 60px;
-  width: 100%;
+  width: 1000px;
   align-items: center;
   font-size: 16px;
   text-align: center;
@@ -49,7 +46,8 @@
 
 
 .text {
-  margin-left: -150px;
+  margin-top: 100px;
+  margin-left: -470px;
   font-size: medium;
   margin-bottom: 20px;
   /* border: 2px solid var(--dark); */
@@ -70,7 +68,7 @@
   height: 40px;
   border-radius: 10px;
   cursor: pointer;
-  margin: 80px 50px 0px 0px;
+  margin: 80px 150px 50px 0px;
 }
 
 .btnReset {
@@ -81,5 +79,6 @@
   width: 100px;
   height: 40px;
   border-radius: 10px;
+  margin-right: 800px;
   
 }
