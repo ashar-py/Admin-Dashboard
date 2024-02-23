@@ -1,4 +1,4 @@
-.container {
+/* .container {
     max-width: 800px;
     
   margin-left: 100px;
@@ -26,7 +26,7 @@
     border-radius: 20px;
     border: 5px solid var(--dark);
     box-sizing: border-box;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     font-size: 20px;
   }
     
@@ -73,11 +73,82 @@
     cursor: pointer;
   }
   
-  /* Responsive Styles */
+  
   @media screen and (max-width: 600px) {
     .container {
       max-width: 100%;
       padding: 0 20px;
     }
   }
-  
+   */
+
+   /* promptBuilder.module.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.container label {
+  display: block;
+  font-weight: bold;
+}
+
+.container  textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+
+.buttonReset {
+  background-color: #dc3545;
+}
+
+.buttonReset:hover {
+  background-color: #bd2130;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container input[type="text"]
+  textarea {
+    width: calc(100% - 16px);
+  }
+
+  .container button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
