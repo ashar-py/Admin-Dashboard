@@ -1,10 +1,10 @@
 .footer {
   width: 70%;
-  background-color: transparent; /* Set background color */
-  color: #333; /* Set text color */
-  text-align: center; /* Center-align text */
-  padding: 2px 0px; /* Add padding to the top and bottom */
-  position:relative; /* Fix the footer to the bottom of the viewport */
+  background-color: transparent; 
+  color: #333; 
+  text-align: center;
+  padding: 2px 0px; 
+  position:relative; 
   left: 190px;
   
   bottom: 0;
@@ -14,9 +14,9 @@
   
 }
 
-/* Responsive styling */
+
 @media screen and (max-width: 768px) {
   .footer {
-    font-size: 14px; /* Decrease font size for smaller screens */
+    font-size: 14px; 
   }
 }
