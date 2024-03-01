@@ -6,6 +6,7 @@ import ToggleSwitch from "@/components/chat/toggleswitch";
 import ChatMessage from "@/components/chat/chatmessage";
 import retrieveChatHistory from "@/app/api/chathistory";
 import { callApi } from "@/app/api/ai";
+import Image from 'next/image';
 
 function useChatScroll(dep) {
   const ref = useRef();
@@ -89,14 +90,15 @@ const Chatbot = () => {
   const retrieveChat = async () => {
     try {
       const chatHistory = await retrieveChatHistory(userPhoneNumber, searchType);
-  
+
       const messagesArray = Array.isArray(chatHistory.data)
         ? chatHistory.data
         : chatHistory.data?.messages || [];
-  
+
+      // Map and append the new messages to the end of the existing messages array
       setMessages((prevMessages) => [
         ...prevMessages,
-        ...messagesArray.map(({ role, content }) => ({ role, content })),
+        ...messagesArray.map(({ role, content }) => ({ role, content })).reverse(), // Reverse the order
       ]);
     } catch (error) {
       console.error('Error retrieving chat history:', error);
@@ -160,7 +162,7 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
-          {loading && <img src="/Rolling.gif" width="50" height="50" alt="Loading..." />} 
+          {loading && <Image src="/Rolling.gif" width="50" height="50" alt="Loading..." />} 
         </div>
         
       </div>
@@ -183,12 +185,3 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
-
-
-
-
-
-
-
-

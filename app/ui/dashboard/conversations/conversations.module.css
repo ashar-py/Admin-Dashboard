@@ -17,16 +17,7 @@
   
 }
 
-.chatContainer {
-  display:flex;
-  
-  flex-direction: column;
-  flex-grow: 1;
-  overflow-y:auto;
-  scroll-behavior: smooth; 
-  
-  
-}
+
 
 
 
@@ -57,6 +48,17 @@
 }
 
 
+}
+
+.chatContainer {
+  display:flex;
+  
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y:auto;
+  scroll-behavior: smooth; 
+  
+  
 }
 
 /* Chat Message Container */

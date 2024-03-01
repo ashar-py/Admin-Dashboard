@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import { fetchUserInfo } from "@/app/api/userinfo";
 import retrieveChatHistory from "@/app/api/chathistory";
@@ -32,8 +31,9 @@ const UserInfo = ({ phoneNumber }) => {
       try {
         setLoadingChatHistory(true);
         const history = await retrieveChatHistory(phoneNumber, "bimakartbike");
-        //console.log("History received", history);
-        setChatHistory(history.data);
+        // Reverse the order of the chat history
+        const reversedHistory = history.data.reverse();
+        setChatHistory(reversedHistory);
         setLoadingChatHistory(false);
       } catch (error) {
         console.error("Error fetching chat history:", error);
@@ -50,12 +50,11 @@ const UserInfo = ({ phoneNumber }) => {
   return (
     <div className={styles.container}>
       <span className={styles.title}>User Information</span>
-      {loadingUserData ? <Image
-            src="/Rolling.gif"
-            width="60"
-            height="60"
-            alt="Loading.."
-          />:<br></br>}
+      {loadingUserData ? (
+        <Image src="/Rolling.gif" width="60" height="60" alt="Loading.." />
+      ) : (
+        <br />
+      )}
       {userData && (
         <div className={styles.userInfoContainer}>
           <div className={styles.tile}>
@@ -100,7 +99,7 @@ const UserInfo = ({ phoneNumber }) => {
           </div>
         </div>
       )}
-      <br></br>
+      <br />
       <button onClick={handleChatHistoryClick} className={styles.toggleButton}>
         {loadingChatHistory ? (
           <p></p>
