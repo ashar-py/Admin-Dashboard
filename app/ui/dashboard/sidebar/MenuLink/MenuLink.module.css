@@ -1,16 +1,21 @@
-.container{
+.container {
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 1px;
     margin: 5px 0px;
     border-radius: 10px;
-    margin-right: 50px;
+    margin-right: 30px; /* Adjusted for responsiveness */
     margin-left: 30px;
-    
 }
 
-.container:hover, .active{
+.container:hover, .active {
     background-color: var(--bgSoft);
-    
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-right: 10px; /* Adjusted for responsiveness */
+        margin-left: 10px; /* Adjusted for responsiveness */
+    }
 }
