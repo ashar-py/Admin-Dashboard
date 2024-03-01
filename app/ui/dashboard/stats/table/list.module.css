@@ -1,7 +1,8 @@
 .title{
   display: block;
   text-align: center;
-  margin: 30px;
+  justify-content: center;
+  
 }
 
 .mainTable {
@@ -15,7 +16,7 @@
 .mainTable td {
   border-bottom: 0.7px solid #f2f2f2;
   padding: 5px; /* Increased padding for better readability */
-  text-align: left;
+  text-align: center;
 }
 
 .mainTable th {
@@ -38,6 +39,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
+  
   transform: translate(-50%, -50%);
   background-color: #fff;
   border: 1px solid #ccc;
@@ -45,7 +47,7 @@
   padding-right: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  max-width: 90%; /* Limiting the maximum width of the popup */
+  max-width: 100%; /* Limiting the maximum width of the popup */
   max-height: 80%; /* Limiting the maximum height of the popup */
   overflow-y: auto; /* Adding scroll for overflow content */
   z-index: 1000; /* Ensure it's above the overlay */
@@ -59,6 +61,25 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.dropdown{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dropdown select {
+  border-radius: 10px;
+
 }
 
 .button:hover {

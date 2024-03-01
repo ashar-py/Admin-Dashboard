@@ -80,10 +80,13 @@
 
 /* User Message Style (Sender) */
 .userMessage {
-  background-color: white; 
-            color: #000; 
-            align-self: flex-end; 
-            
+  background-color: white;
+  color: #000;
+  align-self: flex-end;;
+  width: fit-content;
+  margin-left: 100px;
+  max-width: fit-content; /* Ensures the message doesn't overflow */
+  
 }
 
 /* Bot Message Style (Receiver) */
