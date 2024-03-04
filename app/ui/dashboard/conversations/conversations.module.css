@@ -1,197 +1,189 @@
-.container{
-  
+.container {
   color: white;
+}
+
+.topContainer {
+  display: flex;
   
+  /* gap: 80px; */
+ 
+
+  background-color: rgb(196, 135, 237);
+
   
+}
+
+.backButton{
+  padding:10px;
+  padding-left: 30px;
+  margin: 10px;
+  background-color: var(--bg);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+
+  width: 100px;
+  height: 40px;
 }
 
 .chatbotContainer {
   width: 100%;
   height: 81vh;
- 
+
   background-color: var(--light);
-  
-  
 
-  overflow-y: auto; 
-  
-}
-
-
-
-
-
-.topContainer{
   display: flex;
-  flex-direction:row;
-  gap: 80px;
-  padding-left: 30px;
-  
-  
-  background-color: rgb(196, 135, 237);
-  
- 
-  
 
-.dropdown{
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-  padding-bottom: 10px;
-  align-items: center;
-  justify-content: center;
-  /* font-weight: bold; */
-}
-
-
+  
 }
 
 .chatContainer {
-  display:flex;
-  
+  display: flex;
+  width: 75%;
   flex-direction: column;
   flex-grow: 1;
-  overflow-y:auto;
-  scroll-behavior: smooth; 
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+color: white;
+  background-color: rgb(196, 135, 237);
+}
+
+.suggestionContainer {
+  width: 50%; /* Adjust as needed */
+  height: 81vh;
+  overflow-y: auto;
+  background-color:lightgrey;
+  padding: 20px;
+  color: #000;
+}
+
+.suggestionWindow {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px; /* Adjust as needed */
+  color: #000;
+  width: 100%;
+  height: 40vh;
+  font-size: 30px;
+}
+
+.suggestionButtons{
   
   
+  margin: 10px;
+  background-color: var(--bg);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+
+  width: 100px;
+  height: 40px;
+
+
 }
 
 /* Chat Message Container */
 /* Chat Message Container */
 .chatMessage {
-  padding: 5px; 
-            margin: 10px; 
-            
-            max-width: 70%; 
-            
-            display: flex; 
-            align-items: center; 
-            border-radius: 10px; 
-            
-            
-            
-            
+  padding: 5px;
+  margin: 10px;
+
+  max-width: 70%;
+
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
 }
 
 /* User Message Style (Sender) */
 .userMessage {
   background-color: white;
   color: #000;
-  align-self: flex-end;;
+  align-self: flex-end;
   width: fit-content;
   margin-left: 100px;
   max-width: fit-content; /* Ensures the message doesn't overflow */
-  
 }
 
 /* Bot Message Style (Receiver) */
 .botMessage {
-  background-color: var(--bg); 
-            color: #fff; 
-            align-self: flex-start;
-            border-radius: 20px;
-            padding-right: 50px;
-            
-           
-           
+  background-color: var(--bg);
+  color: #fff;
+  align-self: flex-start;
+  border-radius: 20px;
+  padding-right: 50px;
 }
 
-
 .pre {
-  overflow-wrap: break-word; 
-  white-space: pre-wrap; 
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
   font-size: 19px;
   font-weight: 400;
-  font-family:Arial, Helvetica, sans-serif ;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .messageContent {
-  margin: 0; 
-  padding: 8px; 
+  margin: 0;
+  padding: 8px;
 }
 
-.inputTopContainer{
-  width: auto;
-}
-.inputTopContainer input{
 
-  flex: 8;
-  width: 90%; 
-            padding: 10px; 
-            margin: 10px; 
-            margin-bottom: 10px;
-            border: 1px solid #ddd; 
-            border-radius: 10px; 
-            align-items: center;
-            justify-content: center;
-
-
-}
 .inputContainer {
   display: flex;
   gap: 5px;
 }
 
 .inputContainer input {
-  flex: 8;
-  width: 90%; 
-            padding: 10px; 
-            margin: 2px; 
-            margin-bottom: 10px;
-            border: 1px solid #ddd; 
-            border-radius: 10px; 
-            align-items: center;
-            justify-content: center;
-
+  /* flex: 8; */
+  width: 50%;
+  padding: 10px;
+  margin: 2px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputContainer button {
-  padding-right: 0px; 
-  
-            background-color: var(--bg); 
-            color: #fff; 
-            border: none; 
-            border-radius: 10px; 
-            cursor: pointer;
-            font-size: 14px;
-            
-            width: 100px;
-            height: 40px;
+  padding-right: 0px;
+
+  background-color: var(--bg);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+
+  width: 100px;
+  height: 40px;
 }
 
-.historyButton{
- 
-  padding-right: 0px; 
-  margin: 10px; 
-            background-color: var(--bg); 
-            color: #fff; 
-            border: none; 
-            border-radius: 10px; 
-            cursor: pointer;
-            font-size: 14px;
-            
-            width: 140px;
-            height: 40px;
 
-}
 
 .toggleSwitch {
-  position:absolute;
-  display: flex;
+  position: relative;
+  /* display: flex; */
   margin-right: 0px;
   margin-top: 13px;
- 
-  
+
   width: 60px;
   height: 34px;
-  
 }
-
 
 .toggle-switch input {
   opacity: 0;
@@ -199,15 +191,12 @@
   height: 0;
 }
 
-.switchText{
+.switchText {
   font-size: 15px;
   margin-left: 80px;
   margin-top: 18px;
-  
+
   font-weight: bold;
- 
-  
-  
 }
 
 .slider {
@@ -224,7 +213,7 @@
 
 .slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 26px;
   width: 26px;
   left: 4px;
@@ -244,10 +233,9 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.checkbox{
-  margin-left:20px ;
+.checkbox {
+  margin-left: 20px;
 }
-
 
 @media only screen and (max-width: 768px) {
   .mainTable th,
