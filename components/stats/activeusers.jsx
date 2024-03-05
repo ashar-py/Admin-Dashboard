@@ -197,7 +197,7 @@ const ActiveUsers = () => {
               <tr>
                 <th>USER NAME</th>
                 <th>PHONE NUMBER</th>
-                <th> VIEW</th>
+                <th>DETAILS</th>
                 <th> VIEW CHAT</th>
               </tr>
             </thead>
@@ -227,7 +227,7 @@ const ActiveUsers = () => {
                         <td>
                           <Link
                             href={{
-                              pathname: "./conversations",
+                              pathname: "./agent_assist",
                               query: {
                                 phoneNumber: userData.phone_no,
                                 dropdownValue: dropdownValue,

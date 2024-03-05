@@ -1,0 +1,246 @@
+.container {
+    color: white;
+  }
+  
+  .topContainer {
+    display: flex;
+    
+    /* gap: 80px; */
+   
+  
+    background-color: rgb(196, 135, 237);
+  
+    
+  }
+  
+  .backButton{
+    padding:10px;
+    padding-left: 30px;
+    margin: 10px;
+    background-color: var(--bg);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  
+    width: 100px;
+    height: 40px;
+  }
+  
+  .chatbotContainer {
+    width: 100%;
+    height: 81vh;
+  
+    background-color: var(--light);
+  
+    display: flex;
+  
+    
+  }
+  
+  .chatContainer {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+  color: white;
+    background-color: rgb(196, 135, 237);
+  }
+  
+  .suggestionContainer {
+    width: 50%; /* Adjust as needed */
+    height: 81vh;
+    overflow-y: auto;
+    background-color:lightgrey;
+    padding: 20px;
+    color: #000;
+  }
+  
+  .suggestionWindow {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px; /* Adjust as needed */
+    color: #000;
+    width: 100%;
+    height: 40vh;
+    font-size: 30px;
+  }
+  
+  .suggestionButtons{
+    
+    
+    margin: 10px;
+    background-color: var(--bg);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  
+    width: 100px;
+    height: 40px;
+  
+  
+  }
+  
+  /* Chat Message Container */
+  /* Chat Message Container */
+  .chatMessage {
+    padding: 5px;
+    margin: 10px;
+  
+    max-width: 70%;
+  
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  /* User Message Style (Sender) */
+  .userMessage {
+    background-color: white;
+    color: #000;
+    align-self: flex-end;
+    width: fit-content;
+    margin-left: 100px;
+    max-width: fit-content; /* Ensures the message doesn't overflow */
+  }
+  
+  /* Bot Message Style (Receiver) */
+  .botMessage {
+    background-color: var(--bg);
+    color: #fff;
+    align-self: flex-start;
+    border-radius: 20px;
+    padding-right: 50px;
+  }
+  
+  .pre {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .messageContent {
+    margin: 0;
+    padding: 8px;
+  }
+  
+  
+  .inputContainer {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .inputContainer input {
+    /* flex: 8; */
+    width: 50%;
+    padding: 10px;
+    margin: 2px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .inputContainer button {
+    padding-right: 0px;
+  
+    background-color: var(--bg);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  
+    width: 100px;
+    height: 40px;
+  }
+  
+  
+  
+  .toggleSwitch {
+    position: relative;
+    /* display: flex; */
+    margin-right: 0px;
+    margin-top: 13px;
+  
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switchText {
+    font-size: 15px;
+    margin-left: 80px;
+    margin-top: 18px;
+  
+    font-weight: bold;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  
+  /* Styling for when the toggle switch is checked (on) */
+  input:checked + .slider {
+    background-color: var(--dark);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .checkbox {
+    margin-left: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .mainTable th,
+    .mainTable td {
+      padding: 10px; /* Decreased padding for smaller screens */
+    }
+  }
+  

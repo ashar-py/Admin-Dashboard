@@ -86,13 +86,13 @@ const UserInfo = ({ phoneNumber, prefix }) => { // Add prefix as prop
           <div className={styles.tile}>
             <span>Lead Quality</span>
             <div className={styles.content}>
-              <p>
+              {/* <p>
                 <strong>Customer Sentiment:</strong>{" "}
                 {userData.threads.active_threads[0].intent}
-              </p>
+              </p> */}
               <p>
                 <strong>Lead Quality:</strong>{" "}
-                {userData.threads.active_threads[0].status}
+                {userData.threads.active_threads[0].intent}
               </p>
               <p>
                 <strong>Recommended next steps:</strong>{" "}

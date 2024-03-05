@@ -28,11 +28,11 @@ const menuItems = [
                 path: "/dashboard",
                 icon: <MdDashboard />,
             },
-            // {
-            //     title: "Conversations",
-            //     path: "/dashboard/conversations",
-            //     icon: <BiConversation />,
-            // },
+            {
+                title: "Conversations",
+                path: "/dashboard/conversations",
+                icon: <BiConversation />,
+            },
             {
                 title: "Customer Stats",
                 path: "/dashboard/stats",
