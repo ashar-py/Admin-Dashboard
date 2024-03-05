@@ -5,7 +5,9 @@
   .topContainer {
     display: flex;
     
-    /* gap: 80px; */
+    gap: 80px;
+    padding-right: 50px;
+    padding-left: 100px;
    
   
     background-color: rgb(196, 135, 237);
@@ -54,15 +56,17 @@
     justify-content: center;
     align-items: center;
     padding-left: 30px;
+    padding: 20px;
   color: white;
-    background-color: rgb(196, 135, 237);
+  background-color: rgb(196, 135, 237);
+    width: auto;
   }
   
   .suggestionContainer {
     width: 50%; /* Adjust as needed */
     height: 81vh;
     overflow-y: auto;
-    background-color:lightgrey;
+    background-color:rgb(241, 195, 250);
     padding: 20px;
     color: #000;
   }
@@ -176,9 +180,9 @@
   
   
   .toggleSwitch {
-    position: relative;
+    position: absolute;
     /* display: flex; */
-    margin-right: 0px;
+    margin-left: 200px;
     margin-top: 13px;
   
     width: 60px;
