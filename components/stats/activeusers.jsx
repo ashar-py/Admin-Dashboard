@@ -187,6 +187,7 @@ const ActiveUsers = () => {
         <option value="liveswitchdemo">LIVESWITCHDEMO</option>
         <option value="bimahublife">BIMAHUBLIFE</option>
         <option value="liveswitchdemo1">LIVESWITCHDEMO1</option>
+        <option value="liveswitchsoham">LIVESWITCHSOHAM</option>
       </select>
       {error ? (
         <p>Error: {error}</p>
