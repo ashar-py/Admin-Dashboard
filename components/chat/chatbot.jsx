@@ -124,7 +124,7 @@ const Chatbot = () => {
             <option value="bimahublife">BIMAHUBLIFE</option>
             <option value="liveswitchdemo1">LIVESWITCHDEMO1</option>
             <option value="liveswitchsoham">LIVESWITCHSOHAM</option>
-            <option value="cleartaxtax">Clear Tax</option>
+            <option value="cleartaxtax">CLEAR TAX</option>
           </select>
         </div>
 
