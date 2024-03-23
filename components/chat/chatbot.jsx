@@ -5,7 +5,8 @@ import styles from "@/app/ui/dashboard/conversations/conversations.module.css";
 import ToggleSwitch from "@/components/chat/toggleswitch";
 import ChatMessage from "@/components/chat/chatmessage";
 import retrieveChatHistory from "@/app/api/chathistory";
-import { callApi } from "@/app/api/ai";
+import { callApi } from "@/app/api/livechat";
+import {resetChat} from "@/app/api/resetchat"; 
 import Image from 'next/image';
 
 function useChatScroll(dep) {
@@ -25,7 +26,7 @@ const Chatbot = () => {
   const [searchType, setSearchType] = useState('');
   const [userPhoneNumber, setUserPhoneNumber] = useState('');
   const [isPhoneNumberEntered, setIsPhoneNumberEntered] = useState(false);
-  const [loading, setLoading] = useState(false); // State for loading spinner
+  const [loading, setLoading] = useState(false); 
   const chatContainerRef = useChatScroll(messages);
 
   const handleSearchTypeChange = (event) => {
@@ -86,7 +87,7 @@ const Chatbot = () => {
       }
     }
   };
-  
+
   const retrieveChat = async () => {
     try {
       const chatHistory = await retrieveChatHistory(userPhoneNumber, searchType);
@@ -110,13 +111,22 @@ const Chatbot = () => {
     setIsPhoneNumberEntered(!!event.target.value && isValidPhoneNumber(event.target.value));
   };
 
+  const resetChatHandler = async () => {
+    try {
+      const response = await resetChat(inputMessage, searchType, userPhoneNumber);
+      // Clear chat messages and display welcome message
+      setMessages([{ role: 'assistant', content: response.data.welcome_message }]);
+    } catch (error) {
+      console.error('Error resetting chat:', error);
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.topContainer}>
         <div>
           <label>Select Customer</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
-          <option value="#">SELECT</option>
+            <option value="#">SELECT</option>
             <option value="bimakartbike">BIMAKARTBIKE</option>
             <option value="dmrchr">DMRCHR</option>
             <option value="jatangofashion">JATANGOFASHION</option>
@@ -144,17 +154,18 @@ const Chatbot = () => {
             toggleSwitch={toggleSwitch}
           />
           <div className={styles.switchText}><span>{isEnabled ? 'AI Enabled' : 'AI Disabled'}</span></div>
-           
         </div>
-        
 
         <button className={styles.historyButton} onClick={retrieveChat}>
           Chat history
         </button>
+
+        
+        
       </div>
-      
+
       <div className={styles.chatbotContainer} ref={chatContainerRef}>
-      
+
         <div className={styles.chatContainer}>
           {messages.map((msg, index) => (
             <ChatMessage
@@ -164,29 +175,33 @@ const Chatbot = () => {
               className={msg.role === 'assistant' ? styles.botMessage : styles.userMessage}
             />
           ))}
-          {loading && <Image src="/Rolling.gif" width="50" height="50" alt="Loading..." />} 
+          {loading && <Image className={styles.image}  src="/Rolling.gif" width="50" height="50" alt="Loading..." />}
         </div>
-        
+
       </div>
 
-      
+
       <div className={styles.inputContainer}>
-          <input
-            type="text"
-            placeholder="Type your message..."
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
-            onKeyPress={handleKeyPress} 
-          />
-          <button onClick={sendMessage} disabled={!isPhoneNumberEntered}>
-            Send
-          </button>
-        </div>
+        <input
+          type="text"
+          placeholder="Type your message..."
+          value={inputMessage}
+          onChange={(e) => setInputMessage(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
+        <button onClick={sendMessage} disabled={!isPhoneNumberEntered}>
+          Send
+        </button>
+        <button  onClick={resetChatHandler}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 };
 
 export default Chatbot;
+
 
 
 

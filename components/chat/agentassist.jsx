@@ -4,7 +4,7 @@ import styles from "@/app/ui/dashboard/agentassist/agentassist.module.css";
 import ToggleSwitch from "@/components/chat/toggleswitch";
 import ChatMessage from "@/components/chat/chatmessage";
 import retrieveChatHistory from "@/app/api/chathistory";
-import { callApi } from "@/app/api/ai";
+import { callApi } from "@/app/api/livechat";
 import Image from 'next/image';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';

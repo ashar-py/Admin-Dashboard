@@ -262,6 +262,9 @@ input:checked + .slider:before {
   background-color: var(--light);
   
 }
+.image{
+  margin-left: 200px;
+}
 
 .chatContainer {
   display:flex;
@@ -300,6 +303,7 @@ width:100%;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  font-size: 16px;
 }
 
 
@@ -366,18 +370,20 @@ width:100%;
   flex: 8;
   width: 90%; 
             padding: 10px; 
+            
             margin: 10px; 
             margin-bottom: 10px;
             border: 1px solid #ddd; 
             border-radius: 10px; 
             align-items: center;
             justify-content: center;
+            font-size: 16px;
 
 
 }
 .inputContainer {
   display: flex;
-  gap: 5px;
+  gap: 0px;
 }
 
 .inputContainer input {
@@ -407,11 +413,11 @@ width:100%;
             border: none; 
             border-radius: 10px; 
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
             
             width: 100px;
             height: 40px;
-            margin-right: 100px;
+            margin-right: 50px;
 }
 
 .historyButton{
@@ -423,7 +429,7 @@ width:100%;
             border: none; 
             border-radius: 10px; 
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
             
             width: 100px;
             height: 40px;
