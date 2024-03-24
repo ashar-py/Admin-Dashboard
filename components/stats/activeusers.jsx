@@ -11,7 +11,7 @@ const ActiveUsers = () => {
   const [activeUsers, setActiveUsers] = useState([]);
   const [error, setError] = useState(null);
   const [selectedPhoneNo, setSelectedPhoneNo] = useState(null);
-  const [dropdownValue, setDropdownValue] = useState("#"); // Default valuee
+  const [dropdownValue, setDropdownValue] = useState("#"); // Default valueee
 
   useEffect(() => {
     const fetchData = async () => {
