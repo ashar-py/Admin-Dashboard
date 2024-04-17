@@ -127,14 +127,6 @@ const Chat = () => {
           <label>Select Customer</label>
           <select className={styles.dropdown} value={searchType} onChange={handleSearchTypeChange}>
             <option value="#">SELECT</option>
-            <option value="bimakartbike">BIMAKARTBIKE</option>
-            <option value="dmrchr">DMRCHR</option>
-            <option value="jatangofashion">JATANGOFASHION</option>
-            <option value="liveswitchdemo">LIVESWITCHDEMO </option>
-            <option value="bimahublife">BIMAHUBLIFE</option>
-            <option value="liveswitchdemo1">LIVESWITCHDEMO1</option>
-            <option value="liveswitchsoham">LIVESWITCHSOHAM</option>
-            <option value="cleartaxtax">CLEAR TAX</option>
             <option value="trinilegacymocer">MOCER</option>
             <option value="trinimocer">TRINIMOCER</option>
           </select>
