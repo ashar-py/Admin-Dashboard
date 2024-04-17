@@ -34,6 +34,11 @@ const menuItems = [
                 icon: <BiConversation />,
             },
             {
+                title: "Chat",
+                path: "/dashboard/chat",
+                icon: <BiConversation />,
+            },
+            {
                 title: "Customer Stats",
                 path: "/dashboard/stats",
                 icon: <IoInformationCircleOutline />,
