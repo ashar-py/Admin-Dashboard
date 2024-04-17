@@ -7,7 +7,7 @@ const resetChat = async (message, prefix, phoneNumber) => {
     const config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: `https://v5ywnvc7ve.execute-api.ap-south-1.amazonaws.com/api/chat/completions?prefix=trinimocer&phone_no=911234500001`,
+      url: `https://rhd4lozcs6.execute-api.us-east-1.amazonaws.com/api/initiateChat?prefix=${prefix}&phone_no=${phoneNumber}`,
       headers: { 'Content-Type': 'application/json' },
       data: data
     };
